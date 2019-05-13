@@ -29,7 +29,21 @@
             </router-link>
           </li>
         </ul> -->
-        <ul class="nav">
+        <ul class="nav" :bind="getNavDatra">
+          <!-- <li v-for="item in navDatra">
+            <a>
+              <i class="iconfont icon-shouye"></i>
+              账户中心
+              <i class="iconfont icon-shouye"></i>
+            </a>
+            <ul class="navLi">
+              <li>
+                <router-link to="/about">
+                  <span>├─账户充值</span>
+                </router-link>
+              </li>
+            </ul>
+          </li> -->
           <li>
             <router-link to="/">
               <i class="iconfont icon-shouye"></i>
@@ -115,13 +129,66 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'app',
-  components: {
-    // HelloWorld
+  data(){
+     return {
+        'navDatra' : []
+      }
+  },
+  load(){
+    console.log(1212121212121212121212121212121212121212121212121212)
+    // this.getNavDatra()
+  },
+  methods:{
+    getNavDatra(){
+      this.navDatra = [
+        {
+          "name": "后台首页",
+          "str": false,
+          "icon": "shouye",
+          "list": []
+        },
+        {
+          "name": "账户中心",
+          "str": false,
+          "icon": "shouye",
+          "list": [
+            {"name": "账户充值", "url": "/"},
+            {"name": "修改密码", "url": "/"},
+            {"name": "升级续费", "url": "/"},
+            {"name": "短信余额", "url": "/"},
+            {"name": "短信发送记录", "url": "/"}
+          ]
+        },
+        {
+          "name": "小程序制作",
+          "str": false,
+          "icon": "shouye",
+          "list": [
+            {"name": "小程序发布", "url": "/"},
+            {"name": "小程序编辑", "url": "/"},
+            {"name": "模板市场", "url": "/"},
+            {"name": "支付配置", "url": "/"},
+            {"name": "小程序下载", "url": "/"}
+          ]
+        },
+        {
+          "name": "小程序设置",
+          "str": false,
+          "icon": "shouye",
+          "list": [
+            {"name": "模板设置", "url": "/"},
+            {"name": "商家设置", "url": "/"},
+            {"name": "商家管理手机端", "url": "/"},
+            {"name": "支付配置", "url": "/"},
+            {"name": "小程序下载", "url": "/"}
+          ]
+        }
+      ]
+    }
   }
+  
 }
 </script>
 
