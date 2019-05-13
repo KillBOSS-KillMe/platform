@@ -12,7 +12,8 @@
     </header>
     <div class="content">
       <nav>
-        <ul class="nav">
+        <!-- <a> -->
+        <!-- <ul class="nav">
           <li>
             <router-link to="/">
               <i class="iconfont icon-shouye"></i>
@@ -26,6 +27,83 @@
               About
               <i class="iconfont icon-shouye"></i>
             </router-link>
+          </li>
+        </ul> -->
+        <ul class="nav">
+          <li>
+            <router-link to="/">
+              <i class="iconfont icon-shouye"></i>
+              后头首页
+              <i class="iconfont icon-shouye"></i>
+            </router-link>
+          </li>
+          <li>
+            <a>
+              <i class="iconfont icon-shouye"></i>
+              账户中心
+              <i class="iconfont icon-shouye"></i>
+            </a>
+            <ul class="navLi">
+              <li>
+                <router-link to="/about">
+                  <span>├─账户充值</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/about">
+                  <span>├─账户充值</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/about">
+                  <span>├─账户充值</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/about">
+                  <span>├─账户充值</span>
+                </router-link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a>
+              <i class="iconfont icon-shouye"></i>
+              小程序制作
+              <i class="iconfont icon-shouye"></i>
+            </a>
+            <ul class="navLi" v-if="ss">
+              <li>
+                <router-link to="/about">
+                  <span>├─ 小程序发布</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/about">
+                  <span>├─ 小程序编辑</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/about">
+                  <span>├─ 模板市场</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/about">
+                  <span>├─ 支付设置</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/about">
+                  <span>├─ 小程序下载</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/about">
+                  <span>├─ 生成模板</span>
+                </router-link>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -117,6 +195,7 @@ export default {
       background-color: #2c3e50;
     }
   }
+
 }
 .content{
   position: absolute;
@@ -174,6 +253,30 @@ export default {
         }
       }
     }
+      .navLi{
+        background: rgb(245, 245, 245);
+        overflow: hidden;
+        display: block;
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        line-height: 1.5;
+        li{
+          line-height: 1.5;
+          position: relative;
+          display: block;
+          background-color: #fff;
+          a{
+            color: #000;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            font-weight: normal;
+            text-transform: none;
+            font-size: 13px;
+            padding: 11px 15px;
+            position: relative;
+          }
+        }
+      }
   }
   .page{
     height: 100%;
