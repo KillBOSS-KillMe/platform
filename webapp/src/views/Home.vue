@@ -7,15 +7,221 @@
         <div class="info">
           <div class="imgorInfo">
             <img src="@/assets/logo.png" />
-            <div class="">1</div>
+            <div class="">
+              <div class="name">西安贝肯伟</div>
+              <div class="description">
+                通用版·普通版
+                <span>2020年04月03日到期</span>
+              </div>
+            </div>
           </div>
-          <div class="">1</div>
+          <div class="thisInfo">
+            <div>
+              已开通小程序：
+              <span>1</span>
+              个
+            </div>
+            <div>
+              系统稳定运营：
+              <span>42</span>
+              天
+            </div>
+          </div>
         </div>
         <div class="swiper">
           <img src="@/assets/logo.png" />
         </div>
       </div>
-      <div>1</div>
+      <div class="programList">
+        <div class="name">
+          小程序列表
+          <span>列表中所有授权的小程序必须属于同一个公司主体账号</span>
+        </div>
+        <div class="button">
+          <button>创建小程序</button>
+          <button>创建小程序</button>
+          <button>创建小程序</button>
+          <button>创建小程序</button>
+        </div>
+        <div class="list">
+          <div class="item">
+            <div class="status">
+              <div class="sta">
+                <span>·</span>
+                审核中
+              </div>
+              <div class="version">
+                V2.92
+                <span>更新</span>
+              </div>
+            </div>
+            <div class="QRCode">
+              <img src="@/assets/logo.png">
+              <img class="QRCodeImg" src="@/assets/logo.png">
+            </div>
+            <div class="programInfo">
+              <div class="iconfont icon-shouye programIcon"></div>
+              <div>
+                <div class="programName">小程序名称</div>
+                <div class="time"> 
+                  <icon class="iconfont icon-shouye"></icon>
+                  2019-05-05 18:11:11
+                </div>
+              </div>
+            </div>
+            <div class="operating">
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                装修
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                数据
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                设置
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                删除
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="status">
+              <div class="sta">
+                <span>·</span>
+                审核中
+              </div>
+              <div class="version">
+                V2.92
+                <span>更新</span>
+              </div>
+            </div>
+            <div class="QRCode">
+              <img src="@/assets/logo.png">
+              <img class="QRCodeImg" src="@/assets/logo.png">
+            </div>
+            <div class="programInfo">
+              <div class="iconfont icon-shouye programIcon"></div>
+              <div>
+                <div class="programName">小程序名称</div>
+                <div class="time"> 
+                  <icon class="iconfont icon-shouye"></icon>
+                  2019-05-05 18:11:11
+                </div>
+              </div>
+            </div>
+            <div class="operating">
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                装修
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                数据
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                设置
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                删除
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="status">
+              <div class="sta">
+                <span>·</span>
+                审核中
+              </div>
+              <div class="version">
+                V2.92
+                <span>更新</span>
+              </div>
+            </div>
+            <div class="QRCode">
+              <img src="@/assets/logo.png">
+              <img class="QRCodeImg" src="@/assets/logo.png">
+            </div>
+            <div class="programInfo">
+              <div class="iconfont icon-shouye programIcon"></div>
+              <div>
+                <div class="programName">小程序名称</div>
+                <div class="time"> 
+                  <icon class="iconfont icon-shouye"></icon>
+                  2019-05-05 18:11:11
+                </div>
+              </div>
+            </div>
+            <div class="operating">
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                装修
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                数据
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                设置
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                删除
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="status">
+              <div class="sta">
+                <span>·</span>
+                审核中
+              </div>
+              <div class="version">
+                V2.92
+                <span>更新</span>
+              </div>
+            </div>
+            <div class="QRCode">
+              <img src="@/assets/logo.png">
+              <img class="QRCodeImg" src="@/assets/logo.png">
+            </div>
+            <div class="programInfo">
+              <div class="iconfont icon-shouye programIcon"></div>
+              <div>
+                <div class="programName">小程序名称</div>
+                <div class="time"> 
+                  <icon class="iconfont icon-shouye"></icon>
+                  2019-05-05 18:11:11
+                </div>
+              </div>
+            </div>
+            <div class="operating">
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                装修
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                数据
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                设置
+              </div>
+              <div>
+                <icon class="iconfont icon-shouye"></icon>
+                删除
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div>1</div>
       <div>1</div>
     </div>
@@ -47,12 +253,12 @@ export default {
     height: 200rem;
     .features{
       width: 67.4rem;
-      background-color: #fff;
+      // background-color: #fff;
     }
     .message{
       margin-left: 1rem ;
       width: 23.444rem;
-      background-color: #fff;
+      // background-color: #fff;
     }
   }
   .companyInfo{
@@ -63,16 +269,206 @@ export default {
     .info{
       width: 25rem;
       height: 7rem;
-      border: 1px solid #000;
+      border-radius: .5rem;
+      background-color: #fff;
+      .imgorInfo{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        div{
+          text-align: left;
+          margin: .5rem;
+        }
+        span{
+          color: #f98a10;
+        }
+        .name{
+          color: #343434;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+        .description{
+          font-size: .7rem;
+          color: #555;
+        }
+        img{
+          width: 3rem;
+          height: 3rem;
+          margin: .5rem;
+        }
+        
+      }
+      .thisInfo{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: .78rem;
+        background-color: rgb(249, 249, 249);
+        padding: 1rem;
+        div{
+          font-size: .4rem;
+          color: #555;
+          margin-right: 2rem;
+          span{
+            color: #343434;
+          }
+        }
+      }
     }
     .swiper{
       width: 41rem;
       height: 7rem;
-      border: 1px solid #000;
+      border-radius: .5rem;
+      background-color: #fff;
       img{
         width: 100%;
         height: 100%;
       }
     }
+  }
+  .programList{
+    width: 67.4rem;
+    height: auto;
+    margin-top: .5rem;
+    background-color: #fff;
+    .name{
+      font-size: .8rem;
+      color: #343434;
+      padding: .8rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      span{
+        margin-left: 1rem;
+        font-size: .7rem;
+        color: #9f9f9f;
+      }
+    }
+    .button{
+      padding: .4rem .8rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      button{
+        margin-right: 1rem;
+        border-width: 0;
+        padding: .4rem .8rem;
+        background-color: #f98a10;
+        border-radius: .2rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .list{
+      text-align: left;
+      margin-left: 1rem;
+      height: auto;
+      .item{
+        width: 20rem;
+        height: 20rem;
+        padding: .5rem;
+        display: inline-block;
+        .status{
+          width: 100%;
+          height: 1.8rem;
+          background-color: #f9f9f9;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: .5rem;
+          .sta{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            span{
+              font-size: 5rem;
+              color: #f98a10;
+              border-radius: 5rem;
+            }
+          }
+          .version{
+            span{
+              color: #2d8cf0;
+              margin-right: .5rem;
+            }
+          }
+        }
+        .QRCode{
+          height: 13rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+          .QRCodeImg{
+            width: 7rem;
+            height: 7rem;
+            border-radius: 7rem;
+            position: absolute;
+            z-index: 5;
+          }
+        }
+        .programInfo{
+          height: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          .programIcon{
+            width: 2rem;
+            height: 2rem;
+            margin: .5rem;
+            border: 1px solid #f98a10;
+            border-radius: .1rem;
+            color: #f98a10;
+            background-color: #fff3ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .programName{
+            font-size: .7rem;
+            color: #343434;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          }
+          .time{
+            font-size: .7rem;
+            color: #9f9f9f;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          }
+        }
+        .operating{
+          background-color: #f9f9f9;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          font-size: .7rem;
+          color: #9f9f9f;
+          div{
+            width: 5rem;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            icon{
+              margin-right: .2rem;
+            }
+          }
+          div:hover{
+            background-color: #f98a10;
+            color: #fff;
+          }
+        }
+      }
+    }
+    
   }
 </style>
