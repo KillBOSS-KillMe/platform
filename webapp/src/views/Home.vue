@@ -289,127 +289,18 @@ export default {
 }
 </script>
 <style lang="less">
-  .special{
-    width: 67.4rem;
-    height: auto;
-    margin-top: .5rem;
-    background-color: #fff;
-    .name{
-      font-size: .8rem;
-      color: #343434;
-      padding: .8rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
-    .con{
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      height: 5.5rem;
-      .item{
-        width: 16.2rem;
-        height: 4.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: .8rem;
-        background-color: #f9f9f9;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img{
-          width: 3.1rem;
-          height: 3.6rem;
-          margin-right: .5rem;
-        }
-      }
-    }
-    
-  }
-  .guide{
-    width: 67.4rem;
-    height: auto;
-    margin-top: .5rem;
-    background-color: #fff;
-    .name{
-      font-size: .8rem;
-      color: #343434;
-      padding: .8rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      .guideInfo{
-        margin-left: 1rem;
-        font-size: .7rem
-      }
-      .community{
-        color: #2d8cf0;
-      }
-    }
-    .con{
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      height: 5.5rem;
-      .item{
-        width: 20.8rem;
-        height: 4.5rem;
-        background-color: #999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: .8rem;
-        icon{
-          width: 3.6rem;
-          height: 3.6rem;
-          border-radius: 3.6rem;
-          color: #fff;
-          font-size: 2rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-right: .5rem;
-        }
-        
-      }
-      .novice{
-        background-color: #f0ffef;
-        color: #59b752;
-        icon{
-          background-color: #59b752;
-        }
-      }
-      .Application{
-        background-color: #fff9ef;
-        color: #f98a10;
-        icon{
-          background-color: #f98a10;
-        }
-      }
-      .release{
-        background-color: #f1f8ff;
-        color: #6bc2ff;
-        icon{
-          background-color: #6bc2ff;
-        }
-      }
-    }
-  }
   .home{
     display: flex;
     // align-items: center;
     justify-content: space-between;
     margin: .5rem;
-    height: 200rem;
+    height: auto;
     .features{
       width: 67.4rem;
-      // background-color: #fff;
     }
     .message{
       margin-left: 1rem ;
       width: 23.444rem;
-      // background-color: #fff;
     }
   }
   .companyInfo{
@@ -620,6 +511,112 @@ export default {
         }
       }
     }
+  }
+  .special{
+    width: 67.4rem;
+    height: auto;
+    margin-top: .5rem;
+    background-color: #fff;
+    .name{
+      font-size: .8rem;
+      color: #343434;
+      padding: .8rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .con{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 5.5rem;
+      .item{
+        width: 16.2rem;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .8rem;
+        background-color: #f9f9f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+          width: 3.1rem;
+          height: 3.6rem;
+          margin-right: .5rem;
+        }
+      }
+    }
     
+  }
+  .guide{
+    width: 67.4rem;
+    height: auto;
+    margin-top: .5rem;
+    background-color: #fff;
+    .name{
+      font-size: .8rem;
+      color: #343434;
+      padding: .8rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .guideInfo{
+        margin-left: 1rem;
+        font-size: .7rem
+      }
+      .community{
+        color: #2d8cf0;
+      }
+    }
+    .con{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 5.5rem;
+      .item{
+        width: 20.8rem;
+        height: 4.5rem;
+        background-color: #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .8rem;
+        icon{
+          width: 3.6rem;
+          height: 3.6rem;
+          border-radius: 3.6rem;
+          color: #fff;
+          font-size: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: .5rem;
+        }
+        
+      }
+      .novice{
+        background-color: #f0ffef;
+        color: #59b752;
+        icon{
+          background-color: #59b752;
+        }
+      }
+      .Application{
+        background-color: #fff9ef;
+        color: #f98a10;
+        icon{
+          background-color: #f98a10;
+        }
+      }
+      .release{
+        background-color: #f1f8ff;
+        color: #6bc2ff;
+        icon{
+          background-color: #6bc2ff;
+        }
+      }
+    }
   }
 </style>
