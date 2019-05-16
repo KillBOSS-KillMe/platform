@@ -1,22 +1,29 @@
 
 <template>
   <div class="about">
-    <!-- <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <div class="about">
-      <h1>测试页2</h1>
-    </div>
+    <h1>装修</h1>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'about',
   components: {
-    HelloWorld
+    // HelloWorld
   }
 }
 </script>
+<style lang="less">
+  .about{
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    margin: .5rem;
+    height: auto;
+    background-color: #fff;
+    width: 92rem;
+  }
+</style>

@@ -71,8 +71,10 @@
             </div>
             <div class="operating">
               <div>
-                <icon class="iconfont icon-shouye"></icon>
-                装修
+                <router-link to="/about">
+                  <icon class="iconfont icon-shouye"></icon>
+                  装修
+                </router-link>
               </div>
               <div>
                 <icon class="iconfont icon-shouye"></icon>
