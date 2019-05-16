@@ -338,20 +338,20 @@
         <div class="item">
           <icon class="iconfont icon-shouye"></icon>
           <div class="con">
-            <div class="name">遇到问题</div>
+            <div class="name">商家社区</div>
             <div class="description">
-              <span>在线客服</span>
-              即将为您服务
+              <span></span>
+              在商家互相交流中成长
             </div>
           </div>
         </div>
         <div class="item">
           <icon class="iconfont icon-shouye"></icon>
           <div class="con">
-            <div class="name">遇到问题</div>
+            <div class="name">意见反馈</div>
             <div class="description">
-              <span>在线客服</span>
-              即将为您服务
+              <span></span>
+              用心聆听反馈
             </div>
           </div>
         </div>
