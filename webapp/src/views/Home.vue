@@ -270,9 +270,96 @@
       </div>
     </div>
     <div class="message">
-      <div>1</div>
-      <div>1</div>
-      <div>1</div>
+      <div class="messageSys">
+        <div class="title">
+          <div class="name">
+            <icon class="iconfont icon-shouye"></icon>
+            消息通知
+          </div>
+          <div class="more">
+            更多
+            <icon class="iconfont icon-shouye"></icon>
+          </div>
+        </div>
+        <div class="con">
+          <div class="item">
+            <div class="messageCon">
+              <icon class="iconfont icon-shouye"></icon>
+              <div>【系统公告】公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</div>
+              <img src="@/assets/logo.png">
+            </div>
+            <div class="time">05-11</div>
+          </div>
+          <div class="item">
+            <div class="messageCon">
+              <icon class="iconfont icon-shouye"></icon>
+              <div>【系统公告】公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</div>
+              <img src="@/assets/logo.png">
+            </div>
+            <div class="time">05-11</div>
+          </div>
+          <div class="item">
+            <div class="messageCon">
+              <icon class="iconfont icon-shouye"></icon>
+              <div>【系统公告】公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</div>
+              <img src="@/assets/logo.png">
+            </div>
+            <div class="time">05-11</div>
+          </div>
+          <div class="item">
+            <div class="messageCon">
+              <icon class="iconfont icon-shouye"></icon>
+              <div>【系统公告】公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</div>
+              <img src="@/assets/logo.png">
+            </div>
+            <div class="time">05-11</div>
+          </div>
+          <div class="item">
+            <div class="messageCon">
+              <icon class="iconfont icon-shouye"></icon>
+              <div>【系统公告】公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</div>
+              <img src="@/assets/logo.png">
+            </div>
+            <div class="time">05-11</div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback">
+        <div class="item">
+          <icon class="iconfont icon-shouye"></icon>
+          <div class="con">
+            <div class="name">遇到问题</div>
+            <div class="description">
+              <span>在线客服</span>
+              即将为您服务
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-shouye"></icon>
+          <div class="con">
+            <div class="name">遇到问题</div>
+            <div class="description">
+              <span>在线客服</span>
+              即将为您服务
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-shouye"></icon>
+          <div class="con">
+            <div class="name">遇到问题</div>
+            <div class="description">
+              <span>在线客服</span>
+              即将为您服务
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="QRCode">
+        <img src="@/assets/logo.png">
+        <img src="@/assets/logo.png">
+      </div>
     </div>
   </div>
 </template>
@@ -301,6 +388,7 @@ export default {
     .message{
       margin-left: 1rem ;
       width: 23.444rem;
+      // background-color: #fff;
     }
   }
   .companyInfo{
@@ -619,4 +707,125 @@ export default {
       }
     }
   }
+  .message{
+    .messageSys{
+      padding: .4rem;
+      width: 23rem;
+      background-color: #fff;
+      .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: .8rem;
+        color: #343434;
+        .name{
+          icon{
+            font-size: .7rem;
+            color: #9f9f9f;
+          }
+        }
+        .more{
+          font-size: .7rem;
+          color: #9f9f9f;
+        }
+      }
+      .con{
+        height: auto;
+        .item{
+          height: 1.75rem;
+          border-bottom: 1px solid #f9f9f9;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: #fd1e1f;
+          font-size: .5rem;
+          .messageCon{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            icon{
+              font-size: .5rem;
+            }
+            div{
+              width: 10rem;
+              overflow: hidden;
+              text-overflow:ellipsis;
+              white-space:nowrap;
+            }
+            img{
+              width: 1.5rem;
+              height: .5rem;
+            }
+          }
+          .time{
+            
+          }
+        }
+      }
+    }
+    .feedback{
+      padding: .4rem;
+      width: 23rem;
+      background-color: #fff;
+      margin-top: .5rem;
+      .item:hover{
+        background-color: #ebf7ff;
+      }
+      .item{
+        margin: .5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        icon{
+          width: 3rem;
+          height: 3rem;
+          margin-right: .5rem;
+          background-color: #efdfd9;
+          color: #ff8d55;
+          font-size: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .con{
+          width: 20rem;
+        }
+        .name{
+          width: 100%;
+          font-size: .9rem;
+          color: #343434;
+          text-align: center;
+          margin-bottom: .3rem;
+          display: flex;
+          justify-content: flex-start;
+        }
+        .description{
+          display: flex;
+          justify-content: flex-start;
+          width: 100%;
+          text-align: center;
+          font-size: .5rem;
+          color: #9f9f9f;
+          span{
+            color: #2d8cf0;
+          }
+        }
+
+      }
+    }
+    .QRCode{
+      width: 23rem;
+      padding: .4rem;
+      margin-top: .5rem;
+      background-color: #ff7967;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      img{
+        width: 7.5rem;
+        height: 7.5rem;
+      }
+    }
+  }
+  
 </style>
