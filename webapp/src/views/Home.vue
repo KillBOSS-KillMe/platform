@@ -222,8 +222,52 @@
           </div>
         </div>
       </div>
-      <div>1</div>
-      <div>1</div>
+      <div class="guide">
+        <div class="name">
+          小程序发布指南
+          <span class="guideInfo">
+            更多教程请到
+            <span class="community">商家社区</span>
+          </span>
+        </div>
+        <div class="con">
+          <div class="item novice">
+            <icon class="iconfont icon-shouye"></icon>
+            新手引导
+          </div>
+          <div class="item Application">
+            <icon class="iconfont icon-shouye"></icon>
+            新手引导<br>
+            新手引导
+          </div>
+          <div class="item release">
+            <icon class="iconfont icon-shouye"></icon>
+            新手引导<br>
+            新手引导
+          </div>
+        </div>
+      </div>
+      <div class="special">
+        <div class="name">小程序特殊能力</div>
+        <div class="con">
+          <div class="item">
+            <img src="@/assets/logo.png">
+            附近的小程序
+          </div>
+          <div class="item">
+            <img src="@/assets/logo.png">
+            申请微信支付
+          </div>
+          <div class="item">
+            <img src="@/assets/logo.png">
+            支付后引导<br>关注公众昂好
+          </div>
+          <div class="item">
+            <img src="@/assets/logo.png">
+            小程序体验者
+          </div>
+        </div>
+      </div>
     </div>
     <div class="message">
       <div>1</div>
@@ -245,6 +289,113 @@ export default {
 }
 </script>
 <style lang="less">
+  .special{
+    width: 67.4rem;
+    height: auto;
+    margin-top: .5rem;
+    background-color: #fff;
+    .name{
+      font-size: .8rem;
+      color: #343434;
+      padding: .8rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .con{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 5.5rem;
+      .item{
+        width: 16.2rem;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .8rem;
+        background-color: #f9f9f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+          width: 3.1rem;
+          height: 3.6rem;
+          margin-right: .5rem;
+        }
+      }
+    }
+    
+  }
+  .guide{
+    width: 67.4rem;
+    height: auto;
+    margin-top: .5rem;
+    background-color: #fff;
+    .name{
+      font-size: .8rem;
+      color: #343434;
+      padding: .8rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .guideInfo{
+        margin-left: 1rem;
+        font-size: .7rem
+      }
+      .community{
+        color: #2d8cf0;
+      }
+    }
+    .con{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 5.5rem;
+      .item{
+        width: 20.8rem;
+        height: 4.5rem;
+        background-color: #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .8rem;
+        icon{
+          width: 3.6rem;
+          height: 3.6rem;
+          border-radius: 3.6rem;
+          color: #fff;
+          font-size: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: .5rem;
+        }
+        
+      }
+      .novice{
+        background-color: #f0ffef;
+        color: #59b752;
+        icon{
+          background-color: #59b752;
+        }
+      }
+      .Application{
+        background-color: #fff9ef;
+        color: #f98a10;
+        icon{
+          background-color: #f98a10;
+        }
+      }
+      .release{
+        background-color: #f1f8ff;
+        color: #6bc2ff;
+        icon{
+          background-color: #6bc2ff;
+        }
+      }
+    }
+  }
   .home{
     display: flex;
     // align-items: center;
