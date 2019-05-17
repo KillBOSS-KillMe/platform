@@ -18,7 +18,35 @@
           <li role="presentation" class="active">页面管理</li>
           <li role="presentation">组件库</li>
         </ul>
-        <div class="pageList"></div>
+        <div class="pageList">
+          <div class="newPage">
+            <i class="iconfont icon-shouye"></i>
+            新建页面
+          </div>
+          <ul class="pageLi">
+            <li>
+              页面名称
+              <span>
+                <i class="iconfont icon-shouye"></i>
+                <i class="iconfont icon-shouye"></i>
+              </span>
+            </li>
+            <li>
+              页面名称
+              <span>
+                <i class="iconfont icon-shouye"></i>
+                <i class="iconfont icon-shouye"></i>
+              </span>
+            </li>
+            <li>
+              页面名称
+              <span>
+                <i class="iconfont icon-shouye"></i>
+                <i class="iconfont icon-shouye"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
         <div class="moduleList"></div>
       </div>
       <div class="effect">1</div>
@@ -127,7 +155,36 @@ export default {
         border-radius: .5rem .5rem 0 0;
       }
     }
-    
+    .pageList{
+      .newPage{
+        width: 10.35rem;
+        height: 1.52rem;
+        line-height: 1.52rem;
+        color: #555;
+        background-color: #fff;
+        border-radius: .3rem;
+        border: 1px solid #9f9f9f;
+        margin: 1rem auto;
+      }
+      .pageLi{
+        li{
+          width: 14rem;
+          height: 1.9rem;
+          border: solid #9f9f9f;
+          border-width: 0px;
+          border-top-width: 1px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 .5rem;
+          color: #555;
+          font-size: .5rem;
+        }
+      }
+    }
+    .moduleList{
+
+    }
   }
   .effect{
     border: 1px solid #9f9f9f;
