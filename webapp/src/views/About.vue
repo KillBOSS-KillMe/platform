@@ -13,7 +13,14 @@
       <span>装修过程中不想影响线上客户使用要怎么做呢？</span>
     </div>
     <div class="factory">
-      <div class="tool">1</div>
+      <div class="tool">
+        <ul class="nav-tabs">
+          <li role="presentation" class="active">页面管理</li>
+          <li role="presentation">组件库</li>
+        </ul>
+        <div class="pageList"></div>
+        <div class="moduleList"></div>
+      </div>
       <div class="effect">1</div>
       <div class="adjustment">1</div>
     </div>
@@ -74,24 +81,61 @@ export default {
     .tool{
       margin: 0 1rem;
       margin-right: 1.5rem;
-      border: 1px solid #000;
+      
       width: 15rem;
       height: 33rem;
     }
     .effect{
       margin: 0 1rem;
       margin-right: 1.5rem;
-      border: 1px solid #000;
       width: 16.2rem;
       height: 33rem;
     }
     .adjustment{
       margin: 0 1rem;
       margin-right: 1.5rem;
-      border: 1px solid #000;
       width: 35.3rem;
       height: auto;
     }
+  }
+  .tool{
+    border: 1px solid #9f9f9f;
+    border-radius: .5rem;
+    .nav-tabs{
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      li{
+        height: 2rem;
+        width: 7.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #cfcfcf;
+        color: #555;
+        border-radius: 0 .5rem 0 0;
+      }
+      li:nth-child(1){
+        border-radius: .5rem 0 0 0;
+      }
+      li:nth-child(2){
+        border-radius: 0 .5rem 0 0;
+      }
+      .active{
+        color: #2d8cf0 !important;
+        background-color: #fff;
+        border-radius: .5rem .5rem 0 0;
+      }
+    }
+    
+  }
+  .effect{
+    border: 1px solid #9f9f9f;
+    border-radius: 1.5rem;
+  }
+  .adjustment{
+    border: 1px solid #9f9f9f;
+    border-radius: .5rem;
   }
   
 </style>
