@@ -113,7 +113,24 @@
           </div>
         </div>
       </div>
-      <div class="effect">1</div>
+      <div class="effect">
+        <div class="mobileSta">
+          <span>9:50</span>
+          <div>
+            <i class="iconfont icon-shouye"></i>
+            <i class="iconfont icon-shouye"></i>
+            <i class="iconfont icon-shouye"></i>
+          </div>
+        </div>
+        <div class="pageInfo">
+          <i class="iconfont icon-shouye"></i>
+          <span>页面名称</span>
+          <i class="iconfont icon-shouye"></i>
+        </div>
+        <div class="pageShow">
+          123123123
+        </div>
+      </div>
       <div class="adjustment">1</div>
     </div>
   </div>
@@ -269,7 +286,7 @@ export default {
           height: auto;
           text-align: left;
           li:hover{
-            border: 1px dashed #f98a10;
+            border: 1px dashed #2d8cf0;
           }
           li{
             border: 1px solid #cfcfcf;
@@ -298,6 +315,39 @@ export default {
   .effect{
     border: 1px solid #9f9f9f;
     border-radius: 1.5rem;
+    .mobileSta{
+      padding: 1rem .5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .25rem;
+      color: #343434;
+      .iconfont{
+        margin: .2rem;
+      }
+    }
+    .pageInfo{
+      padding: 0 .5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span{
+        font-size: .3rem;
+        font-weight: 600;
+        color: #343434;
+      }
+      .iconfont{
+        margin: .3rem;
+      }
+    }
+    .pageShow{
+      width: 15rem;
+      padding: .5rem 0;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      border: 1px solid #333;
+    }
   }
   .adjustment{
     border: 1px solid #9f9f9f;
