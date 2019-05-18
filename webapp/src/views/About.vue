@@ -18,7 +18,7 @@
           <li role="presentation" class="active">页面管理</li>
           <li role="presentation">组件库</li>
         </ul>
-        <div class="pageList">
+        <div class="pageList" style="display: none">
           <div class="newPage">
             <i class="iconfont icon-shouye"></i>
             新建页面
@@ -47,7 +47,71 @@
             </li>
           </ul>
         </div>
-        <div class="moduleList"></div>
+        <div class="moduleList">
+          <div class="item">
+            <div class="typeNmae">--标题--</div>
+            <ul>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="typeNmae">--标题--</div>
+            <ul>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="typeNmae">--标题--</div>
+            <ul>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+              <li>
+                <i class="iconfont icon-shouye"></i>
+                装修
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="effect">1</div>
       <div class="adjustment">1</div>
@@ -179,11 +243,56 @@ export default {
           padding: 0 .5rem;
           color: #555;
           font-size: .5rem;
+          .iconfont{
+            color: #9f9f9f;
+            margin-left: .25rem;
+          }
+          .iconfont:hover{
+            color: #f98a10;
+          }
+        }
+        li:last-child{
+          border-bottom: 1px solid #9f9f9f;
         }
       }
     }
     .moduleList{
-
+      .item{
+        margin-top: 1rem;
+        .typeNmae{
+          width: 100%;
+          color: #555;
+          font-size: .5rem;
+        }
+        ul{
+          width: 100%;
+          height: auto;
+          text-align: left;
+          li:hover{
+            border: 1px dashed #f98a10;
+          }
+          li{
+            border: 1px solid #cfcfcf;
+            width: 2.25rem;
+            height: 2rem;
+            background-color: #fafaf9;
+            color: #555;
+            font-size: .5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            padding: .5rem;
+            margin: .5rem .825rem;
+            border-radius: .25rem;
+            .iconfont{
+              font-size: .85rem;
+              color: #2d8cf0;
+            }
+          }
+        }
+      }
+      
     }
   }
   .effect{
