@@ -342,6 +342,7 @@ export default {
     }
     .pageShow{
       width: 15rem;
+      height: 25rem;
       padding: .5rem 0;
       position: relative;
       overflow: hidden;
