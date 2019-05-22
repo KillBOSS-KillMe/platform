@@ -51,13 +51,13 @@
           <div class="item">
             <div class="typeNmae">--标题--</div>
             <ul>
-              <li draggable="true" id="item1"  @dragstart='copyDrop($event)'>
+              <li draggable="true" id="component1"  @dragstart='copyDrop($event)'>
                 <i class="iconfont icon-shouye"></i>
-                装修1
+                店招
               </li>
-              <li draggable="true" id="item2"  @dragstart='copyDrop($event)'>
+              <li draggable="true" id="component2"  @dragstart='copyDrop($event)'>
                 <i class="iconfont icon-shouye"></i>
-                装修2
+                搜索框
               </li>
             </ul>
           </div>
@@ -81,6 +81,16 @@
       </div>
       <div class="adjustment">1</div>
     </div>
+
+
+    <div class="domList">
+      <div  id="component1dom">
+        <img src="@/assets/logo.png" />
+      </div>
+      <div id="component2dom">
+        <img src="@/assets/logo.png" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -100,20 +110,22 @@ export default {
   },
   methods:{
     copyDrop(e) {
-      e.dataTransfer.setData("text", e.target.id);
+      e.dataTransfer.setData("id", e.target.id);
         // e.dataTransfer.setData('addBuffer', e.target.id)
         // this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
     },
     getDrop(e) {
       // alert(11)
+      console.log(e)
       console.log('SET -> addBuffer:::111:::')
       e.preventDefault();
-      var data = e.dataTransfer.getData("Text");
-      console.log(data)
-      e.target.appendChild(document.getElementById(data));
+      var data = e.dataTransfer.getData("id");
+      e.target.appendChild(document.getElementById(data+'dom'));
     },
     allowDrop(e) {
       e.preventDefault();
+      // var data = e.dataTransfer.getData("id");
+      // e.target.appendChild(document.getElementById(data+'dom'));
     }
   }
 }
@@ -314,16 +326,38 @@ export default {
     .pageShow{
       width: 15rem;
       height: 25rem;
-      padding: .5rem 0;
+      padding: 0;
       position: relative;
-      overflow: hidden;
+      overflow-y: auto;
       margin: 0 auto;
       border: 1px solid #333;
+    }
+    .pageShow::-webkit-scrollbar {
+      display: none;
     }
   }
   .adjustment{
     border: 1px solid #9f9f9f;
     border-radius: .5rem;
   }
-  
+
+
+
+
+
+
+  .domList{
+    display: none;
+  }
+  #component1dom,#component2dom{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+      width: 100%;
+      height: 10rem;
+    }
+  }
 </style>
