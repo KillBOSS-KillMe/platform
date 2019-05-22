@@ -53,11 +53,11 @@
             <ul>
               <li draggable="true" id="item1"  @dragstart='copyDrop($event)'>
                 <i class="iconfont icon-shouye"></i>
-                装修
+                装修1
               </li>
               <li draggable="true" id="item2"  @dragstart='copyDrop($event)'>
                 <i class="iconfont icon-shouye"></i>
-                装修
+                装修2
               </li>
             </ul>
           </div>
@@ -77,9 +77,7 @@
           <span>页面名称</span>
           <i class="iconfont icon-shouye"></i>
         </div>
-        <div class="pageShow" v-on:drop='drop($event)'>
-          123123123
-        </div>
+        <div class="pageShow" @drop='getDrop($event)' @dragover='allowDrop($event)'></div>
       </div>
       <div class="adjustment">1</div>
     </div>
@@ -102,17 +100,21 @@ export default {
   },
   methods:{
     copyDrop(e) {
-      console.log('SET -> addBuffer::::::', e.target.id)
+      e.dataTransfer.setData("text", e.target.id);
         // e.dataTransfer.setData('addBuffer', e.target.id)
         // this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
     },
-    drop(e) {
-      console.log('SET -> addBuffer::::::', e.target.id)
-      console.log(e)
-      // ev.preventDefault();
-      // var data=ev.dataTransfer.getData("Text");
-      // ev.target.appendChild(document.getElementById(data));
+    getDrop(e) {
+      // alert(11)
+      console.log('SET -> addBuffer:::111:::')
+      e.preventDefault();
+      var data = e.dataTransfer.getData("Text");
+      console.log(data)
+      e.target.appendChild(document.getElementById(data));
     },
+    allowDrop(e) {
+      e.preventDefault();
+    }
   }
 }
 </script>
