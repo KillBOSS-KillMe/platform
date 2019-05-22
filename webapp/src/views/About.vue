@@ -51,61 +51,11 @@
           <div class="item">
             <div class="typeNmae">--标题--</div>
             <ul>
-              <li>
+              <li draggable="true" id="item1"  @dragstart='copyDrop($event)'>
                 <i class="iconfont icon-shouye"></i>
                 装修
               </li>
-              <li>
-                <i class="iconfont icon-shouye"></i>
-                装修
-              </li>
-              <li>
-                <i class="iconfont icon-shouye"></i>
-                装修
-              </li>
-              <li>
-                <i class="iconfont icon-shouye"></i>
-                装修
-              </li>
-            </ul>
-          </div>
-          <div class="item">
-            <div class="typeNmae">--标题--</div>
-            <ul>
-              <li>
-                <i class="iconfont icon-shouye"></i>
-                装修
-              </li>
-              <li>
-                <i class="iconfont icon-shouye"></i>
-                装修
-              </li>
-              <li>
-                <i class="iconfont icon-shouye"></i>
-                装修
-              </li>
-              <li>
-                <i class="iconfont icon-shouye"></i>
-                装修
-              </li>
-            </ul>
-          </div>
-          <div class="item">
-            <div class="typeNmae">--标题--</div>
-            <ul>
-              <li>
-                <i class="iconfont icon-shouye"></i>
-                装修
-              </li>
-              <li>
-                <i class="iconfont icon-shouye"></i>
-                装修
-              </li>
-              <li>
-                <i class="iconfont icon-shouye"></i>
-                装修
-              </li>
-              <li>
+              <li draggable="true" id="item2"  @dragstart='copyDrop($event)'>
                 <i class="iconfont icon-shouye"></i>
                 装修
               </li>
@@ -127,7 +77,7 @@
           <span>页面名称</span>
           <i class="iconfont icon-shouye"></i>
         </div>
-        <div class="pageShow">
+        <div class="pageShow" v-on:drop='drop($event)'>
           123123123
         </div>
       </div>
@@ -144,6 +94,25 @@ export default {
   name: 'about',
   components: {
     // HelloWorld
+  },
+  data(){
+    return {
+      isOpenWind :true  //点击X关闭窗口
+    }
+  },
+  methods:{
+    copyDrop(e) {
+      console.log('SET -> addBuffer::::::', e.target.id)
+        // e.dataTransfer.setData('addBuffer', e.target.id)
+        // this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
+    },
+    drop(e) {
+      console.log('SET -> addBuffer::::::', e.target.id)
+      console.log(e)
+      // ev.preventDefault();
+      // var data=ev.dataTransfer.getData("Text");
+      // ev.target.appendChild(document.getElementById(data));
+    },
   }
 }
 </script>
