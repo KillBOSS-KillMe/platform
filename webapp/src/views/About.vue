@@ -85,9 +85,11 @@
 
     <div class="domList">
       <div  id="component1dom">
+        <i class="iconfont icon-shouye"></i>
         <img src="@/assets/logo.png" />
       </div>
       <div id="component2dom">
+        <i class="iconfont icon-shouye"></i>
         <img src="@/assets/logo.png" />
       </div>
     </div>
@@ -108,6 +110,10 @@ export default {
       isOpenWind :true  //点击X关闭窗口
     }
   },
+  mounted(){
+    
+    this.getDomList()
+  },
   methods:{
     copyDrop(e) {
       e.dataTransfer.setData("id", e.target.id);
@@ -126,8 +132,13 @@ export default {
       e.preventDefault();
       // var data = e.dataTransfer.getData("id");
       // e.target.appendChild(document.getElementById(data+'dom'));
+    },
+    getDomList() {
+      console.log(22222)
     }
-  }
+  },
+  
+
 }
 </script>
 <style lang="less">
