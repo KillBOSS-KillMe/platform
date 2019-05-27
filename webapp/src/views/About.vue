@@ -126,16 +126,43 @@ export default {
     copyDrop(e) {
       e.dataTransfer.setData("id", e.target.id);
         // e.dataTransfer.setData('addBuffer', e.target.id)
-        // this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
+        this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
     },
     getDrop(e) {
       // alert(11)
-      console.log(e)
-      console.log('SET -> addBuffer:::111:::')
-      e.preventDefault();
-      var data = e.dataTransfer.getData("id");
-      e.target.appendChild(document.getElementById(data+'dom'));
-      this.getDomList()
+      // console.log(e)
+      // console.log('SET -> addBuffer:::111:::')
+      // e.preventDefault();
+      // var data = e.dataTransfer.getData("id");
+      // e.target.appendChild(document.getElementById(data+'dom'));
+      // this.getDomList()
+      // console.log('放下')
+        e.preventDefault()
+        var id = e.dataTransfer.getData('id')
+        if (id === null || id === '') {
+          console.log('id is NULL！')
+          return
+        }
+        var itemName = 'item' + parseInt(Math.random() * (1000000 - 1 + 1) + 1)
+        console.log('GET-> addBuffer:', itemName)
+        // 克隆真实对象
+        var cloneObject = document.getElementById(id+'dom').cloneNode(true)
+
+        // 为克隆对象设置唯一Id
+        cloneObject.setAttribute('id', itemName)
+        // this.$set(cloneObject, 'id', itemName)
+        // this.$set(cloneObject, '@click', 'updateLabel()')
+        // 把新的节点添加到新的区域中
+        e.target.appendChild(cloneObject)
+
+        console.log(e.target.id)
+        // console.log(cloneObject)
+        // 设置样式
+        this.CopyCss(id, '', '', '')
+
+        // 修改名称
+        this.dialogFormVisible = true
+        this.labelid = itemName
     },
     allowDrop(e) {
       e.preventDefault();
@@ -145,24 +172,30 @@ export default {
     getDomList() {
       console.log(22222)
       this.domList = [
-        `<div  id="component1dom">
+        `<div draggable="true" data-type="1" id="component1dom">
           <i class="iconfont icon-shouye"></i>
           <img src="@/assets/logo.png" />
         </div>`,
-        `<div  id="component2dom">
+        `<div draggable="true" data-type="2" id="component2dom">
           <i class="iconfont icon-shouye"></i>
           <img src="@/assets/logo.png" />
         </div>`,
-        `<div  id="component3dom">
+        `<div draggable="true" data-type="3" id="component3dom">
           <i class="iconfont icon-shouye"></i>
           <img src="@/assets/logo.png" />
         </div>`,
-        `<div  id="component4dom">
+        `<div draggable="true" data-type="4" id="component4dom">
           <i class="iconfont icon-shouye"></i>
           <img src="@/assets/logo.png" />
         </div>`
       ]
-    }
+    },
+    CopyCss(obj, border, background, borderradius) {
+        let moveObj = document.getElementById(obj)
+        moveObj.style.border = border
+        moveObj.style.background = background
+        moveObj.style.borderRadius = borderradius
+      },
   },
   
 
