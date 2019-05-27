@@ -87,16 +87,16 @@
       <!-- <div :for="(item, index) in domList">
         {{item}}
       </div> -->
-       <div v-for="item in domList">
+       <!-- <div v-for="item in domList">
          <div v-html="item"></div>
         
-      </div>
-      <div  id="component1dom">
-        <i class="iconfont icon-shouye"></i>
+      </div> -->
+      <div draggable="true" data-type="1" id="component1dom">
+        <i class="deleteDom iconfont icon-shouye" v-on:click="removedrap($event)"></i>
         <img src="@/assets/logo.png" />
       </div>
-      <div id="component2dom">
-        <i class="iconfont icon-shouye"></i>
+      <div draggable="true" data-type="2" id="component2dom">
+        <i class="deleteDom iconfont icon-shouye" @click="removedrap($event)"></i>
         <img src="@/assets/logo.png" />
       </div>
     </div>
@@ -129,14 +129,6 @@ export default {
         this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
     },
     getDrop(e) {
-      // alert(11)
-      // console.log(e)
-      // console.log('SET -> addBuffer:::111:::')
-      // e.preventDefault();
-      // var data = e.dataTransfer.getData("id");
-      // e.target.appendChild(document.getElementById(data+'dom'));
-      // this.getDomList()
-      // console.log('放下')
         e.preventDefault()
         var id = e.dataTransfer.getData('id')
         if (id === null || id === '') {
@@ -150,11 +142,11 @@ export default {
 
         // 为克隆对象设置唯一Id
         cloneObject.setAttribute('id', itemName)
-        // this.$set(cloneObject, 'id', itemName)
-        // this.$set(cloneObject, '@click', 'updateLabel()')
+        this.$set(cloneObject, 'id', itemName)
+        this.$set(cloneObject, '@click', 'removedrap($event)')
         // 把新的节点添加到新的区域中
         e.target.appendChild(cloneObject)
-
+        
         console.log(e.target.id)
         // console.log(cloneObject)
         // 设置样式
@@ -172,10 +164,10 @@ export default {
     getDomList() {
       console.log(22222)
       this.domList = [
-        `<div draggable="true" data-type="1" id="component1dom">
-          <i class="iconfont icon-shouye"></i>
-          <img src="@/assets/logo.png" />
-        </div>`,
+        // `<div draggable="true" data-type="1" id="component1dom">
+        //   <i class="iconfont icon-shouye"></i>
+        //   <img src="@/assets/logo.png" />
+        // </div>`,
         `<div draggable="true" data-type="2" id="component2dom">
           <i class="iconfont icon-shouye"></i>
           <img src="@/assets/logo.png" />
@@ -190,12 +182,24 @@ export default {
         </div>`
       ]
     },
+      // 移除放下
+    removedrap(e) {
+      console.log('deldeldeldeldeldeldeldeldeldel')
+      removeid = e.dataTransfer.getData('removeBuffer')
+      if (removeid === null || removeid === '') {
+        console.log('removeId == null')
+        return
+      }
+      console.log('移除节点放下ID：', removeid)
+      // 删除节点
+      document.getElementById(removeid).parentNode.removeChild(document.getElementById(removeid));
+    },
     CopyCss(obj, border, background, borderradius) {
-        let moveObj = document.getElementById(obj)
-        moveObj.style.border = border
-        moveObj.style.background = background
-        moveObj.style.borderRadius = borderradius
-      },
+      let moveObj = document.getElementById(obj)
+      moveObj.style.border = border
+      moveObj.style.background = background
+      moveObj.style.borderRadius = borderradius
+    },
   },
   
 
@@ -413,12 +417,45 @@ export default {
   }
 
 
-
+  .pageShow{
+    .deleteDom{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1rem;
+      height: 1rem;
+      display: none;
+    }
+    [data-type]{
+      position: relative;
+      width: 15rem;
+      height: auto;
+      margin: .5rem 0
+    }
+    [data-type]:hover{
+      border: 0.1px dashed #2d8cf0;
+      .deleteDom{
+        display: block;
+      }
+    }
+    [data-type="1"]{
+      img{
+        width: 15rem;
+        height: 15rem;
+      }
+    }
+    [data-type="2"]{
+      img{
+        width: 15rem;
+        height: 10rem;
+      }
+    }
+  }
 
 
 
   .domList{
-    // display: none;
+    display: none;
   }
   #component1dom,#component2dom{
     width: 100%;
