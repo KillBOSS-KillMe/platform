@@ -84,6 +84,13 @@
 
 
     <div class="domList">
+      <!-- <div :for="(item, index) in domList">
+        {{item}}
+      </div> -->
+       <div v-for="item in domList">
+         <div v-html="item"></div>
+        
+      </div>
       <div  id="component1dom">
         <i class="iconfont icon-shouye"></i>
         <img src="@/assets/logo.png" />
@@ -107,6 +114,7 @@ export default {
   },
   data(){
     return {
+      domList:[],
       isOpenWind :true  //点击X关闭窗口
     }
   },
@@ -127,6 +135,7 @@ export default {
       e.preventDefault();
       var data = e.dataTransfer.getData("id");
       e.target.appendChild(document.getElementById(data+'dom'));
+      this.getDomList()
     },
     allowDrop(e) {
       e.preventDefault();
@@ -135,6 +144,24 @@ export default {
     },
     getDomList() {
       console.log(22222)
+      this.domList = [
+        `<div  id="component1dom">
+          <i class="iconfont icon-shouye"></i>
+          <img src="@/assets/logo.png" />
+        </div>`,
+        `<div  id="component2dom">
+          <i class="iconfont icon-shouye"></i>
+          <img src="@/assets/logo.png" />
+        </div>`,
+        `<div  id="component3dom">
+          <i class="iconfont icon-shouye"></i>
+          <img src="@/assets/logo.png" />
+        </div>`,
+        `<div  id="component4dom">
+          <i class="iconfont icon-shouye"></i>
+          <img src="@/assets/logo.png" />
+        </div>`
+      ]
     }
   },
   
@@ -358,7 +385,7 @@ export default {
 
 
   .domList{
-    display: none;
+    // display: none;
   }
   #component1dom,#component2dom{
     width: 100%;
