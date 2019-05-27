@@ -205,7 +205,7 @@ export default {
 
 }
 </script>
-<style lang="less">
+<style scoped lang="less">
   .about{
     // display: flex;
     // // align-items: center;

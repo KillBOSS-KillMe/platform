@@ -377,7 +377,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style scoped lang="less">
   .home{
     display: flex;
     // align-items: center;

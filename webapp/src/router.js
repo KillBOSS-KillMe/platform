@@ -19,6 +19,11 @@ export default new Router({
       component: () => import('./views/About.vue')
     },
     {
+      path: '/marketing',
+      name: 'marketing',
+      component: () => import('./views/Marketing.vue')
+    },
+    {
       path: '/pagetemplate',
       name: 'pagetemplate',
       component: () => import('./views/Pageemtplate.vue')
