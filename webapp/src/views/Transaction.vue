@@ -191,46 +191,147 @@
           </div>
           <table class="tableMax">
             <tr>
-              <td></td>
               <td>浏览数</td>
               <td>转发数</td>
               <td>新用户数</td>
             </tr>
             <tr>
-              <td>昨日</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
             </tr>
             <tr>
-              <td>7日</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
             </tr>
             <tr>
-              <td>30日</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
             </tr>
             <tr>
-              <td>历史汇总</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
             </tr>
             <tr>
-              <td>每日平均</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
             </tr>
             <tr>
-              <td>历史峰值</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
+              <td>
+                <span>
+                  <span>1</span>
+                  内容内容内容内容内容内容内容内容
+                </span>
+                <span>11次</span>
+              </td>
             </tr>
           </table>
         </div>
@@ -470,6 +571,11 @@ export default {
       width: 100%;
       height: auto;
       margin-top: .5rem;
+      // tr{
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: space-between;
+      // }
     }
   }
 }
