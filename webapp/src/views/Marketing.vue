@@ -158,7 +158,6 @@
       </div>
       <div class="branding">
         <h3 class="title">品牌宣传</h3>
-        <div class="conter">
         <ul class="conter">
           <li class="item">
             <i class="iconfont icon-shouye strfontColor1"></i>
@@ -203,11 +202,9 @@
             </dl>
           </li>
         </ul>
-        </div>
       </div>
       <div class="mall">
         <h3 class="title">商城经营</h3>
-        <div class="conter">
         <ul class="conter">
           <li class="item">
             <i class="iconfont icon-shouye strfontColor1"></i>
@@ -252,11 +249,9 @@
             </dl>
           </li>
         </ul>
-        </div>
       </div>
       <div class="branding">
         <h3 class="title">公众号运营</h3>
-        <div class="conter">
         <ul class="conter">
           <li class="item">
             <i class="iconfont icon-shouye strfontColor1"></i>
@@ -301,7 +296,6 @@
             </dl>
           </li>
         </ul>
-        </div>
       </div>
     </div>
   </div>
