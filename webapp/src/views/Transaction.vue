@@ -61,52 +61,48 @@
           </div>
           <div class="listChart">
             <table class="tableMin">
-              <!-- <thead> -->
-                <tr>
-                  <td></td>
-                  <td>浏览数</td>
-                  <td>转发数</td>
-                  <td>新用户数</td>
-                </tr>
-              <!-- </thead>
-              <tbody> -->
-                <tr>
-                  <td>昨日</td>
-                  <td>11</td>
-                  <td>11</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td>7日</td>
-                  <td>11</td>
-                  <td>11</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td>30日</td>
-                  <td>11</td>
-                  <td>11</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td>历史汇总</td>
-                  <td>11</td>
-                  <td>11</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td>每日平均</td>
-                  <td>11</td>
-                  <td>11</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td>历史峰值</td>
-                  <td>11</td>
-                  <td>11</td>
-                  <td>11</td>
-                </tr>
-              <!-- </tbody> -->
+              <tr>
+                <td></td>
+                <td>浏览数</td>
+                <td>转发数</td>
+                <td>新用户数</td>
+              </tr>
+              <tr>
+                <td>昨日</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>7日</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>30日</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>历史汇总</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>每日平均</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>历史峰值</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
             </table>
             <div class="char">用户活跃度图表</div>
           </div>
@@ -131,7 +127,50 @@
             </div>
           </div>
           <div class="listChart">
-            <div class="dataList">数据列表</div>
+            <table class="tableMin">
+              <tr>
+                <td></td>
+                <td>浏览数</td>
+                <td>转发数</td>
+                <td>新用户数</td>
+              </tr>
+              <tr>
+                <td>昨日</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>7日</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>30日</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>历史汇总</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>每日平均</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>历史峰值</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+              </tr>
+            </table>
             <div class="char">用户活跃度图表</div>
           </div>
           <div class="timeChart">最贱三十天曲线图图表</div>
@@ -145,23 +184,55 @@
         <div class="conter">
           <div class="selType">
             <div class="item">
-              <label>类型:</label>
-              <div>浏览数</div>
-              <div>浏览数</div>
-              <div>浏览数</div>
-            </div>
-            <div class="item">
-              <label>时间:</label>
               <div>浏览数</div>
               <div>浏览数</div>
               <div class="active">浏览数</div>
             </div>
           </div>
-          <div class="listChart">
-            <div class="dataList">数据列表</div>
-            <div class="char">用户活跃度图表</div>
-          </div>
-          <div class="timeChart">最贱三十天曲线图图表</div>
+          <table class="tableMax">
+            <tr>
+              <td></td>
+              <td>浏览数</td>
+              <td>转发数</td>
+              <td>新用户数</td>
+            </tr>
+            <tr>
+              <td>昨日</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>7日</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>30日</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>历史汇总</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>每日平均</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>历史峰值</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+          </table>
         </div>
       </div>
       <div class="charts">
@@ -196,23 +267,55 @@
         <div class="conter">
           <div class="selType">
             <div class="item">
-              <label>类型:</label>
-              <div>浏览数</div>
-              <div>浏览数</div>
-              <div>浏览数</div>
-            </div>
-            <div class="item">
-              <label>时间:</label>
               <div>浏览数</div>
               <div>浏览数</div>
               <div class="active">浏览数</div>
             </div>
           </div>
-          <div class="listChart">
-            <div class="dataList">数据列表</div>
-            <div class="char">用户活跃度图表</div>
-          </div>
-          <div class="timeChart">最贱三十天曲线图图表</div>
+          <table class="tableMax">
+            <tr>
+              <td></td>
+              <td>浏览数</td>
+              <td>转发数</td>
+              <td>新用户数</td>
+            </tr>
+            <tr>
+              <td>昨日</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>7日</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>30日</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>历史汇总</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>每日平均</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>历史峰值</td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
@@ -346,7 +449,7 @@ export default {
       color: #afafaf;
       font-size: .75rem;
       height: 11rem;
-      td,tr{
+      td,tr,th{
         padding: 0 !important;
         margin: 0 !important;
         height: 1.75rem;
@@ -361,11 +464,12 @@ export default {
     .tableMin{
       width: 60.4rem;
       height: 11rem;
-      
       margin-top: .5rem;
     }
     .tableMax{
-
+      width: 100%;
+      height: auto;
+      margin-top: .5rem;
     }
   }
 }
