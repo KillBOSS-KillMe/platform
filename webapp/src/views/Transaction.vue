@@ -2,128 +2,47 @@
 <template>
   <div class="transaction">
     <div class="nav">
-      <!-- <ul>
-        <li>
-          <router-link to="/marketing">
-            <i class="iconfont icon-shouye"></i>
-            营销中心
-          </router-link>
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-      </ul> -->
       <el-row class="tac">
-  <el-col>
-    <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose">
-      <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-location"></i>
-          <span>导航一</span>
-        </template>
-        <el-menu-item-group>
-          <template slot="title">分组一</template>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="分组2">
-          <el-menu-item index="1-3">选项3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
-      </el-menu-item>
-      <el-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
-      </el-menu-item>
-    </el-menu>
-  </el-col>
-  <!-- <el-col :span="12">
-    <h5>自定义颜色</h5>
-    <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b">
-      <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-location"></i>
-          <span>导航一</span>
-        </template>
-        <el-menu-item-group>
-          <template slot="title">分组一</template>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="分组2">
-          <el-menu-item index="1-3">选项3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
-      </el-menu-item>
-      <el-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
-      </el-menu-item>
-    </el-menu>
-  </el-col> -->
-</el-row>
+        <el-col>
+          <el-menu
+            default-active="2"
+            class="el-menu-vertical-demo"
+            @open="handleOpen"
+            @close="handleClose"
+          >
+            <el-submenu index="1">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>导航一</span>
+              </template>
+              <el-menu-item-group>
+                <template slot="title">分组一</template>
+                <el-menu-item index="1-1">选项1</el-menu-item>
+                <el-menu-item index="1-2">选项2</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group title="分组2">
+                <el-menu-item index="1-3">选项3</el-menu-item>
+              </el-menu-item-group>
+              <el-submenu index="1-4">
+                <template slot="title">选项4</template>
+                <el-menu-item index="1-4-1">选项1</el-menu-item>
+              </el-submenu>
+            </el-submenu>
+            <el-menu-item index="2">
+              <i class="el-icon-menu"></i>
+              <span slot="title">导航二</span>
+            </el-menu-item>
+            <el-menu-item index="3" disabled>
+              <i class="el-icon-document"></i>
+              <span slot="title">导航三</span>
+            </el-menu-item>
+            <el-menu-item index="4">
+              <i class="el-icon-setting"></i>
+              <span slot="title">导航四</span>
+            </el-menu-item>
+          </el-menu>
+        </el-col>
+      </el-row>
     </div>
     <div class="con">
       <div class="charts">
@@ -509,10 +428,8 @@
 
 <script>
 export default {
-  name: 'transaction',
-  components: {
-    
-  },
+  name: "transaction",
+  components: {},
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
@@ -521,8 +438,7 @@ export default {
       console.log(key, keyPath);
     }
   }
-  
-}
+};
 </script>
 <style scoped lang="less">
 .transaction {
@@ -531,25 +447,9 @@ export default {
   justify-content: space-between;
 }
 .nav {
-  width: 7.5rem;
+  // width: 7.5rem;
   height: 100%;
   background-color: #fff;
-  // li {
-  //   width: 5.9rem;
-  //   padding: 0.8rem;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: flex-start;
-  //   color: #484848;
-  //   font-size: 0.4rem;
-  //   .iconfont {
-  //     margin-right: 0.25rem;
-  //   }
-  // }
-  // li:hover {
-  //   background-color: #eff6ff;
-  //   color: #3889fc;
-  // }
 }
 .con {
   width: 85.65rem;
@@ -558,7 +458,8 @@ export default {
   display: inline-flex;
   flex-wrap: wrap;
 }
-.charts, .list{
+.charts,
+.list {
   width: 85rem;
   height: auto;
   margin-top: 0.5rem;
@@ -573,48 +474,49 @@ export default {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    span{
-      font-size: .65rem;
+    span {
+      font-size: 0.65rem;
       color: #3889fc;
       margin-left: 1rem;
     }
   }
-  .conter{
+  .conter {
     width: 83rem;
     padding: 1rem;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    .selType{
+    .selType {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      .item{
+      .item {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         margin-right: 1rem;
-        label{
-          font-size: .75rem;
+        label {
+          font-size: 0.75rem;
           color: #5a5a5a;
           font-weight: 600;
         }
-        div{
-          font-size: .75rem;
-          padding: .3rem .75rem;
+        div {
+          font-size: 0.75rem;
+          padding: 0.3rem 0.75rem;
           border: 1px solid #c4c4c4;
           color: #c4c4c4;
-          border-radius: .25rem;
-          margin: 0 .5rem;
+          border-radius: 0.25rem;
+          margin: 0 0.5rem;
         }
-        .active, div:hover{
+        .active,
+        div:hover {
           background-color: #3889fc;
           border-color: #3889fc;
           color: #fff;
         }
       }
     }
-    .listChart{
+    .listChart {
       width: 100%;
       display: flex;
       align-items: center;
@@ -625,45 +527,48 @@ export default {
       //   border: 1px solid #333;
       //   margin-top: .5rem;
       // }
-      .char{
+      .char {
         width: 21rem;
         height: 11rem;
         border: 1px solid #333;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
       }
     }
-    .timeChart{
+    .timeChart {
       width: 100%;
       height: 14rem;
       margin-top: 1rem;
       border: 1px solid #333;
     }
-    .tableMax, .tableMin{
+    .tableMax,
+    .tableMin {
       border: 1px solid #f0f0f0;
       color: #afafaf;
-      font-size: .75rem;
+      font-size: 0.75rem;
       height: 11rem;
-      td,tr,th{
+      td,
+      tr,
+      th {
         padding: 0 !important;
         margin: 0 !important;
         height: 1.75rem;
       }
-      tr:nth-child(n){
+      tr:nth-child(n) {
         background-color: #f9f9f9;
       }
-      tr:nth-child(2n){
+      tr:nth-child(2n) {
         background-color: #ffffff;
       }
     }
-    .tableMin{
+    .tableMin {
       width: 60.4rem;
       height: 11rem;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
     }
-    .tableMax{
+    .tableMax {
       width: 100%;
       height: auto;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
       // tr{
       //   display: flex;
       //   align-items: center;
