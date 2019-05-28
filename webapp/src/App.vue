@@ -10,7 +10,7 @@
         <router-link to="/">公众号</router-link>
         <router-link to="/">会员</router-link>
         <router-link to="/marketing">营销</router-link>
-        <router-link to="/">交易</router-link>
+        <router-link to="/transaction">交易</router-link>
         <router-link to="/">设置</router-link>
       </div>
       <div class="operating">

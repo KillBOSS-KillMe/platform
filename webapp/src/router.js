@@ -24,6 +24,12 @@ export default new Router({
       component: () => import('./views/Marketing.vue')
     },
     {
+      path: '/transaction',
+      name: 'transaction',
+      component: () => import('./views/Transaction.vue')
+    },
+    
+    {
       path: '/pagetemplate',
       name: 'pagetemplate',
       component: () => import('./views/Pageemtplate.vue')
