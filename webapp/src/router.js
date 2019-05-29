@@ -16,23 +16,31 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      component: () => import('./views/About.vue')
+      component: () => import('@/views/About')
     },
     {
       path: '/marketing',
       name: 'marketing',
-      component: () => import('./views/Marketing.vue')
+      component: () => import('@/views/Marketing')
     },
     {
+      // 交易页
       path: '/transaction',
       name: 'transaction',
-      component: () => import('./views/Transaction.vue')
+      redirect: '/DataRader',
+      component: () => import('@/views/Transaction'),
+      // 子页跳转
+      children:[{
+        path: '/DataRader',
+        name: 'DataRader',
+        component: () => import('@/components/DataRader')
+      }]
     },
     
     {
       path: '/pagetemplate',
       name: 'pagetemplate',
-      component: () => import('./views/Pageemtplate.vue')
+      component: () => import('@/views/Pageemtplate')
     }
     
   ]
