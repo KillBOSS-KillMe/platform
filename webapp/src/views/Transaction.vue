@@ -25,7 +25,9 @@
                 <router-link to="/tarManagement">
                   <el-menu-item index="2-1">交易概况</el-menu-item>
                 </router-link>
-                <el-menu-item index="2-2">收支明细</el-menu-item>
+                <router-link to="/inOrOutDetail">
+                  <el-menu-item index="2-2">收支明细</el-menu-item>
+                </router-link>
               </el-menu-item-group>
             </el-submenu>
             <el-submenu index="3">

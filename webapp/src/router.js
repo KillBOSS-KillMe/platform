@@ -39,13 +39,20 @@ export default new Router({
       component: () => import('@/views/Transaction'),
       // 子页跳转
       children:[{
+        // 数据雷达
         path: '/dataRader',
         name: 'dataRader',
         component: () => import('@/components/transaction/DataRader')
       },{
+        // 交易概况
         path: '/tarManagement',
         name: 'tarManagement',
         component: () => import('@/components/transaction/TarManagement')
+      },{
+        // 收支明细
+        path: '/inOrOutDetail',
+        name: 'inOrOutDetail',
+        component: () => import('@/components/transaction/InOrOutDetail')
       }]
     },
     
