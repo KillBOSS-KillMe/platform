@@ -10,25 +10,50 @@
             @open="handleOpen"
             @close="handleClose"
           >
-            <el-submenu index="1">
+            <el-menu-item index="1">
+              <i class="el-icon-menu"></i>
+              <span slot="title">数据雷达</span>
+            </el-menu-item>
+            <el-submenu index="2">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span>导航一</span>
+                <span>交易管理</span>
               </template>
               <el-menu-item-group>
-                <template slot="title">分组一</template>
-                <el-menu-item index="1-1">选项1</el-menu-item>
-                <el-menu-item index="1-2">选项2</el-menu-item>
+                <el-menu-item index="2-1">交易概况</el-menu-item>
+                <el-menu-item index="2-2">收支明细</el-menu-item>
               </el-menu-item-group>
-              <el-menu-item-group title="分组2">
-                <el-menu-item index="1-3">选项3</el-menu-item>
-              </el-menu-item-group>
-              <el-submenu index="1-4">
-                <template slot="title">选项4</template>
-                <el-menu-item index="1-4-1">选项1</el-menu-item>
-              </el-submenu>
             </el-submenu>
-            <el-menu-item index="2">
+            <el-submenu index="3">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>订单管理</span>
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="3-1">所有订单</el-menu-item>
+                <el-menu-item index="3-2">代发货订单</el-menu-item>
+                <el-menu-item index="3-3">上门自提订单</el-menu-item>
+                <el-menu-item index="3-4">维权订单</el-menu-item>
+                <el-menu-item index="3-5">评价管理</el-menu-item>
+                <el-menu-item index="3-6">批量发货</el-menu-item>
+                <el-menu-item index="3-7">批量退款</el-menu-item>
+                <el-menu-item index="3-8">订单设置</el-menu-item>
+                <el-menu-item index="3-9">核销记录</el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
+            <el-menu-item index="4">
+              <i class="el-icon-menu"></i>
+              <span slot="title">商品</span>
+            </el-menu-item>
+            <el-menu-item index="5">
+              <i class="el-icon-menu"></i>
+              <span slot="title">服务管理</span>
+            </el-menu-item>
+            <el-menu-item index="6">
+              <i class="el-icon-menu"></i>
+              <span slot="title">配送管理</span>
+            </el-menu-item>
+            <!-- <el-menu-item index="2">
               <i class="el-icon-menu"></i>
               <span slot="title">导航二</span>
             </el-menu-item>
@@ -39,7 +64,7 @@
             <el-menu-item index="4">
               <i class="el-icon-setting"></i>
               <span slot="title">导航四</span>
-            </el-menu-item>
+            </el-menu-item> -->
           </el-menu>
         </el-col>
       </el-row>
