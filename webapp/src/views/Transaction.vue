@@ -63,50 +63,30 @@
             </div>
           </div>
           <div class="listChart">
-            <table class="tableMin">
-              <tr>
-                <td></td>
-                <td>浏览数</td>
-                <td>转发数</td>
-                <td>新用户数</td>
-              </tr>
-              <tr>
-                <td>昨日</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>7日</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>30日</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>历史汇总</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>每日平均</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>历史峰值</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-            </table>
+            <el-table class="tableMin"
+              :data="tableData"
+              style="width: 100%"
+              :row-class-name="tableRowClassName">
+              <el-table-column
+                prop="time"
+                label=""
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="date"
+                label="浏览数"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="name"
+                label="转发数"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="新用户数">
+              </el-table-column>
+            </el-table>
             <div class="char">用户活跃度图表</div>
           </div>
           <div class="timeChart">最贱三十天曲线图图表</div>
@@ -130,50 +110,30 @@
             </div>
           </div>
           <div class="listChart">
-            <table class="tableMin">
-              <tr>
-                <td></td>
-                <td>浏览数</td>
-                <td>转发数</td>
-                <td>新用户数</td>
-              </tr>
-              <tr>
-                <td>昨日</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>7日</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>30日</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>历史汇总</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>每日平均</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>历史峰值</td>
-                <td>11</td>
-                <td>11</td>
-                <td>11</td>
-              </tr>
-            </table>
+            <el-table class="tableMin"
+              :data="tableData"
+              style="width: 100%"
+              :row-class-name="tableRowClassName">
+              <el-table-column
+                prop="time"
+                label=""
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="date"
+                label="浏览数"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="name"
+                label="转发数"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="新用户数">
+              </el-table-column>
+            </el-table>
             <div class="char">用户活跃度图表</div>
           </div>
           <div class="timeChart">最贱三十天曲线图图表</div>
@@ -192,151 +152,30 @@
               <div class="active">浏览数</div>
             </div>
           </div>
-          <table class="tableMax">
-            <tr>
-              <td>浏览数</td>
-              <td>转发数</td>
-              <td>新用户数</td>
-            </tr>
-            <tr>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-              <td>
-                <span>
-                  <span>1</span>
-                  内容内容内容内容内容内容内容内容
-                </span>
-                <span>11次</span>
-              </td>
-            </tr>
-          </table>
+          <el-table class="tableMax"
+              :data="tableData"
+              style="width: 100%"
+              :row-class-name="tableRowClassName">
+              <el-table-column
+                prop="time"
+                label=""
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="date"
+                label="浏览数"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="name"
+                label="转发数"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="新用户数">
+              </el-table-column>
+            </el-table>
         </div>
       </div>
       <div class="charts">
@@ -357,7 +196,30 @@
             </div>
           </div>
           <div class="listChart">
-            <div class="dataList">数据列表</div>
+            <el-table class="tableMin"
+              :data="tableData"
+              style="width: 100%"
+              :row-class-name="tableRowClassName">
+              <el-table-column
+                prop="time"
+                label=""
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="date"
+                label="浏览数"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="name"
+                label="转发数"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="新用户数">
+              </el-table-column>
+            </el-table>
             <div class="char">用户活跃度图表</div>
           </div>
           <div class="timeChart">最贱三十天曲线图图表</div>
@@ -376,50 +238,30 @@
               <div class="active">浏览数</div>
             </div>
           </div>
-          <table class="tableMax">
-            <tr>
-              <td></td>
-              <td>浏览数</td>
-              <td>转发数</td>
-              <td>新用户数</td>
-            </tr>
-            <tr>
-              <td>昨日</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
-            </tr>
-            <tr>
-              <td>7日</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
-            </tr>
-            <tr>
-              <td>30日</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
-            </tr>
-            <tr>
-              <td>历史汇总</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
-            </tr>
-            <tr>
-              <td>每日平均</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
-            </tr>
-            <tr>
-              <td>历史峰值</td>
-              <td>11</td>
-              <td>11</td>
-              <td>11</td>
-            </tr>
-          </table>
+          <el-table class="tableMax"
+            :data="tableData"
+            style="width: 100%"
+            :row-class-name="tableRowClassName">
+            <el-table-column
+              prop="time"
+              label=""
+              width="180">
+            </el-table-column>
+            <el-table-column
+              prop="date"
+              label="浏览数"
+              width="180">
+            </el-table-column>
+            <el-table-column
+              prop="name"
+              label="转发数"
+              width="180">
+            </el-table-column>
+            <el-table-column
+              prop="address"
+              label="新用户数">
+            </el-table-column>
+          </el-table>
         </div>
       </div>
     </div>
@@ -430,6 +272,41 @@
 export default {
   name: "transaction",
   components: {},
+  data() {
+    return {
+      tableData: [{
+        time: '昨日',
+        date: '2016-05-02',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄',
+      }, {
+        time: '7日',
+        date: '2016-05-04',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        time: '30日',
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄',
+      }, {
+        time: '历史汇总',
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄',
+      }, {
+        time: '每日平均',
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄',
+      }, {
+        time: '历史峰值',
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }]
+    }
+  },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
@@ -447,9 +324,13 @@ export default {
   justify-content: space-between;
 }
 .nav {
-  // width: 7.5rem;
+  width: 10rem;
   height: 100%;
   background-color: #fff;
+  overflow: hidden;
+  li{
+    text-align: left;
+  }
 }
 .con {
   width: 85.65rem;
@@ -487,6 +368,7 @@ export default {
     justify-content: flex-start;
     flex-wrap: wrap;
     .selType {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -527,9 +409,10 @@ export default {
       //   border: 1px solid #333;
       //   margin-top: .5rem;
       // }
+      
       .char {
         width: 21rem;
-        height: 11rem;
+        height: 16rem;
         border: 1px solid #333;
         margin-top: 0.5rem;
       }
@@ -545,7 +428,7 @@ export default {
       border: 1px solid #f0f0f0;
       color: #afafaf;
       font-size: 0.75rem;
-      height: 11rem;
+      height: 16rem;
       td,
       tr,
       th {
@@ -562,7 +445,7 @@ export default {
     }
     .tableMin {
       width: 60.4rem;
-      height: 11rem;
+      height: 16rem;
       margin-top: 0.5rem;
     }
     .tableMax {
@@ -575,6 +458,13 @@ export default {
       //   justify-content: space-between;
       // }
     }
+  }
+  .el-table .warning-row {
+    background: oldlace;
+  }
+
+  .el-table .success-row {
+    background: #f0f9eb;
   }
 }
 </style>
