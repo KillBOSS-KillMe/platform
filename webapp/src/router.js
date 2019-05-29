@@ -19,21 +19,33 @@ export default new Router({
       component: () => import('@/views/About')
     },
     {
+      // 营销页
       path: '/marketing',
       name: 'marketing',
-      component: () => import('@/views/Marketing')
+      redirect: '/marketingCenter',
+      component: () => import('@/views/Marketing'),
+      // 子页跳转
+      children:[{
+        path: '/marketingCenter',
+        name: 'marketingCenter',
+        component: () => import('@/components/marketing/MarketingCenter')
+      }]
     },
     {
       // 交易页
       path: '/transaction',
       name: 'transaction',
-      redirect: '/DataRader',
+      redirect: '/dataRader',
       component: () => import('@/views/Transaction'),
       // 子页跳转
       children:[{
-        path: '/DataRader',
-        name: 'DataRader',
-        component: () => import('@/components/DataRader')
+        path: '/dataRader',
+        name: 'dataRader',
+        component: () => import('@/components/transaction/DataRader')
+      },{
+        path: '/tarManagement',
+        name: 'tarManagement',
+        component: () => import('@/components/transaction/TarManagement')
       }]
     },
     

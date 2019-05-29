@@ -10,7 +10,7 @@
             @open="handleOpen"
             @close="handleClose"
           >
-            <router-link to="/DataRader">
+            <router-link to="/dataRader">
               <el-menu-item index="1">
                 <i class="el-icon-menu"></i>
                 <span slot="title">数据雷达</span>
@@ -22,7 +22,9 @@
                 <span>交易管理</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="2-1">交易概况</el-menu-item>
+                <router-link to="/tarManagement">
+                  <el-menu-item index="2-1">交易概况</el-menu-item>
+                </router-link>
                 <el-menu-item index="2-2">收支明细</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
@@ -110,8 +112,8 @@ export default {
     text-align: left;
   }
 }
-router-view{
-  width: 93rem;
-}
+// router-view{
+//   width: 93rem;
+// }
 
 </style>
