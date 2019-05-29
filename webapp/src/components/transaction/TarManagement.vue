@@ -45,9 +45,10 @@
         <div class="selType">
           <div class="item">
             <!-- <label>类型:</label> -->
-            <div>浏览数</div>
-            <div>浏览数</div>
-            <div>浏览数</div>
+            <div>昨天</div>
+            <div>最近7天</div>
+            <div>最近30天</div>
+            <div class="active">自选</div>
           </div>
         </div>
         <div class="timeChart">
@@ -66,14 +67,32 @@
       </div>
     </div>
     <div class="charts">
-      <h3 class="title">转化漏斗</h3>
+      <h3 class="title">交易趋势</h3>
       <div class="conter">
         <div class="selType">
           <div class="item">
             <!-- <label>类型:</label> -->
-            <div>浏览数</div>
-            <div>浏览数</div>
-            <div>浏览数</div>
+            <div>昨天</div>
+            <div>最近7天</div>
+            <div>最近30天</div>
+            <div class="active">自选</div>
+          </div>
+        </div>
+        <div class="timeChart">
+          图表图表图表图表图表图表
+        </div>
+      </div>
+    </div>
+    <div class="charts">
+      <h3 class="title">订单趋势</h3>
+      <div class="conter">
+        <div class="selType">
+          <div class="item">
+            <!-- <label>类型:</label> -->
+            <div>昨天</div>
+            <div>最近7天</div>
+            <div>最近30天</div>
+            <div class="active">自选</div>
           </div>
         </div>
         <div class="timeChart">
