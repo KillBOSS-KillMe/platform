@@ -2,44 +2,47 @@
 <template>
   <div class="marketing">
     <div class="nav">
-      <ul>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-        <li>
-          <i class="iconfont icon-shouye"></i>
-          营销中心
-        </li>
-      </ul>
+      <el-row class="tac">
+        <el-col>
+          <el-menu
+            default-active="2"
+            class="el-menu-vertical-demo"
+            @open="handleOpen"
+            @close="handleClose"
+          >
+            <el-submenu index="1">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>导航一</span>
+              </template>
+              <el-menu-item-group>
+                <template slot="title">分组一</template>
+                <el-menu-item index="1-1">选项1</el-menu-item>
+                <el-menu-item index="1-2">选项2</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group title="分组2">
+                <el-menu-item index="1-3">选项3</el-menu-item>
+              </el-menu-item-group>
+              <el-submenu index="1-4">
+                <template slot="title">选项4</template>
+                <el-menu-item index="1-4-1">选项1</el-menu-item>
+              </el-submenu>
+            </el-submenu>
+            <el-menu-item index="2">
+              <i class="el-icon-menu"></i>
+              <span slot="title">导航二</span>
+            </el-menu-item>
+            <el-menu-item index="3" disabled>
+              <i class="el-icon-document"></i>
+              <span slot="title">导航三</span>
+            </el-menu-item>
+            <el-menu-item index="4">
+              <i class="el-icon-setting"></i>
+              <span slot="title">导航四</span>
+            </el-menu-item>
+          </el-menu>
+        </el-col>
+      </el-row>
     </div>
     <div class="con">
       <div class="process">
@@ -324,24 +327,12 @@ export default {
   justify-content: space-between;
 }
 .nav {
-  width: 7.5rem;
+  width: 10rem;
   height: 100%;
   background-color: #fff;
-  li {
-    width: 5.9rem;
-    padding: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: #484848;
-    font-size: 0.4rem;
-    .iconfont {
-      margin-right: 0.25rem;
-    }
-  }
-  li:hover {
-    background-color: #eff6ff;
-    color: #3889fc;
+  overflow: hidden;
+  li{
+    text-align: left;
   }
 }
 .con {
