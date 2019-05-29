@@ -338,6 +338,14 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    tableRowClassName({row, rowIndex}) {
+      if (rowIndex === 1) {
+        return 'warning-row';
+      } else if (rowIndex === 3) {
+        return 'success-row';
+      }
+      return '';
     }
   }
 };
@@ -346,7 +354,7 @@ export default {
 .transaction {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .nav {
   width: 10rem;
@@ -358,15 +366,15 @@ export default {
   }
 }
 .con {
-  width: 85.65rem;
+  width: 93rem;
   height: auto;
-  margin-left: 1rem;
+  margin-left: .5rem;
   display: inline-flex;
   flex-wrap: wrap;
 }
 .charts,
 .list {
-  width: 85rem;
+  width: 93rem;
   height: auto;
   margin-top: 0.5rem;
   background-color: #fff;
@@ -387,7 +395,7 @@ export default {
     }
   }
   .conter {
-    width: 83rem;
+    width: 91rem;
     padding: 1rem;
     display: flex;
     justify-content: flex-start;

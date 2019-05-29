@@ -324,7 +324,7 @@ export default {
 .marketing {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .nav {
   width: 10rem;
@@ -336,7 +336,7 @@ export default {
   }
 }
 .con {
-  width: 85.65rem;
+  width: 93rem;
   height: auto;
   margin-left: 1rem;
   display: inline-flex;
@@ -365,7 +365,7 @@ export default {
 .branding,
 .mall,
 .public {
-  width: 83.65rem;
+  width: 91rem;
   height: auto;
   .conter{
     display: flex;
@@ -375,10 +375,11 @@ export default {
       margin-right: 0;
     }
     .item{
-      width: 18rem;
+      width: 19.9rem;
       height: 2.5rem;
       border-radius: .5rem;
       background-color: #f9f9f9;
+      border: 0.05rem solid #f9f9f9;
       padding: 1rem;
       display: flex;
       align-items: center;
@@ -414,10 +415,8 @@ export default {
 .tool{
   .conter{
     .item:hover{
-      border: 0.05rem solid #fda327;
+      border-color: #fda327;
       background-color: #fffaf3;
-      width: 17.9rem;
-      height: 2.4rem;
       .strfontColor1{
         color: #fda327;
       }
@@ -427,10 +426,8 @@ export default {
 .branding{
   .conter{
     .item:hover{
-      border: 0.05rem solid #e9403c;
+      border-color: #e9403c;
       background-color: #fffaf3;
-      width: 17.9rem;
-      height: 2.4rem;
       .strfontColor1{
         color: #e9403c;
       }
@@ -440,10 +437,8 @@ export default {
 .mall{
   .conter{
     .item:hover{
-      border: 0.05rem solid #2d8cf0;
+      border-color: #2d8cf0;
       background-color: #fffaf3;
-      width: 17.9rem;
-      height: 2.4rem;
       .strfontColor1{
         color: #2d8cf0;
       }
@@ -453,10 +448,8 @@ export default {
 .public{
   .conter{
     .item:hover{
-      border: 0.05rem solid #44a448;
+      border-color:#44a448;
       background-color: #fffaf3;
-      width: 17.9rem;
-      height: 2.4rem;
       .strfontColor1{
         color: #44a448;
       }
@@ -464,7 +457,7 @@ export default {
   }
 }
 .process {
-  width: 50.5rem;
+  width: 55.5rem;
   height: 10.7rem;
   .conter{
     display: flex;
@@ -502,7 +495,7 @@ export default {
   }
 }
 .festival {
-  width: 30.2rem;
+  width: 32.9rem;
   height: 10.7rem;
   margin-left: 0.5rem;
   .conter{
