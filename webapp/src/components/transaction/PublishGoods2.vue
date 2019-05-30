@@ -2,7 +2,7 @@
 <template>
   <div class="con">
     <div class="charts">
-      <h3 class="title">创建商品</h3>
+      <h3 class="title">创建商品2</h3>
       <div class="conter">
         <div class="step">
           <el-steps :active="active" finish-status="success">
@@ -98,10 +98,7 @@
             </div>
           </div>
           <div class="selList">
-            <router-link to="/publishGoods2">
-              <el-button @click="next">下一步</el-button>
-            </router-link>
-            
+            <el-button @click="next">下一步</el-button>
           </div>
         </div>
       </div>

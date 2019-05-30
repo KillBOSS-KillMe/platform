@@ -68,6 +68,11 @@ export default new Router({
         path: '/publishGoods',
         name: 'publishGoods',
         component: () => import('@/components/transaction/PublishGoods')
+      },{
+        // 发布商品
+        path: '/publishGoods2',
+        name: 'publishGoods2',
+        component: () => import('@/components/transaction/PublishGoods2')
       }]
     },
     
