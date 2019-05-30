@@ -49,15 +49,25 @@
                 <el-menu-item index="3-9">核销记录</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
-            <el-menu-item index="4">
-              <i class="el-icon-menu"></i>
-              <span slot="title">商品</span>
-            </el-menu-item>
-            <el-menu-item index="5">
+            <el-submenu index="4">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>商品</span>
+              </template>
+              <el-menu-item-group>
+                <router-link to="/productList">
+                  <el-menu-item index="4-1">出售中的商品</el-menu-item>
+                </router-link>
+                <router-link to="/publishGoods">
+                  <el-menu-item index="5-1">发布商品</el-menu-item>
+                </router-link>
+              </el-menu-item-group>
+            </el-submenu>
+            <el-menu-item index="6">
               <i class="el-icon-menu"></i>
               <span slot="title">服务管理</span>
             </el-menu-item>
-            <el-menu-item index="6">
+            <el-menu-item index="7">
               <i class="el-icon-menu"></i>
               <span slot="title">配送管理</span>
             </el-menu-item>

@@ -54,10 +54,20 @@ export default new Router({
         name: 'inOrOutDetail',
         component: () => import('@/components/transaction/InOrOutDetail')
       },{
-        // 所哟订单
+        // 所有订单
         path: '/allOrders',
         name: 'allOrders',
         component: () => import('@/components/transaction/AllOrders')
+      },{
+        // 出售中的上品
+        path: '/productList',
+        name: 'productList',
+        component: () => import('@/components/transaction/ProductList')
+      },{
+        // 发布商品
+        path: '/publishGoods',
+        name: 'publishGoods',
+        component: () => import('@/components/transaction/PublishGoods')
       }]
     },
     

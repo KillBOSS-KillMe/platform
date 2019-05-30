@@ -77,6 +77,19 @@
           </el-form-item>
         </el-form>
       </div>
+      <div class="conter">
+        <div class="selType">
+          <div class="item">
+            <div class="active">全部</div>
+            <div>待付款</div>
+            <div>待发货</div>
+            <div>已发货</div>
+            <div>已完成</div>
+            <div>已关闭</div>
+            <div>退款中</div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="charts">
       <h3 class="title">订单趋势</h3>
@@ -203,15 +216,45 @@ export default {
     padding: 1rem;
     text-align: left;
     form{
-      
       .el-form-item{
         width: 21.25rem;
-        .el-form-item__label{
-          color: red !important;
-          width: 5.5rem !important;
+        // .el-form-item__label{
+        //   color: red !important;
+        //   width: 5.5rem !important;
+        // }
+        // .el-form-item__content{
+        //   width: 15.5rem;
+        // }
+      }
+    }
+    .selType {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-right: 1rem;
+        label {
+          font-size: 0.75rem;
+          color: #5a5a5a;
+          font-weight: 600;
         }
-        .el-form-item__content{
-          width: 15.5rem;
+        div {
+          font-size: 0.75rem;
+          padding: 0.3rem 0.75rem;
+          border: 1px solid #c4c4c4;
+          color: #c4c4c4;
+          border-radius: 0.25rem;
+          margin: 0 0.5rem;
+        }
+        .active,
+        div:hover {
+          background-color: #3889fc;
+          border-color: #3889fc;
+          color: #fff;
         }
       }
     }
