@@ -5,25 +5,75 @@
       <h3 class="title">收支明细</h3>
       <div class="conter">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="订 单 号">
+          <el-form-item label="商品名称">
             <el-input v-model="formInline.user" placeholder="请输入订单号"></el-input>
+          </el-form-item>
+          <el-form-item label="订单号">
+            <el-input v-model="formInline.user" placeholder="请选择时间"></el-input>
+          </el-form-item>
+          <el-form-item label="外部单号">
+            <el-input v-model="formInline.user" placeholder="请选择时间"></el-input>
           </el-form-item>
           <el-form-item label="下单时间">
             <el-input v-model="formInline.user" placeholder="请选择时间"></el-input>
           </el-form-item>
+          <el-form-item label="完成时间">
+            <el-input v-model="formInline.user" placeholder="请选择时间"></el-input>
+          </el-form-item>
+          <el-form-item label="订单状态">
+            <el-select v-model="formInline.region" placeholder="请选择活动区域">
+              <el-option label="区域一" value="shanghai"></el-option>
+              <el-option label="区域二" value="beijing"></el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="维权状态">
+            <el-select v-model="formInline.region" placeholder="请选择活动区域">
+              <el-option label="区域一" value="shanghai"></el-option>
+              <el-option label="区域二" value="beijing"></el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="收货人姓名">
+            <el-input v-model="formInline.user" placeholder="请选择时间"></el-input>
+          </el-form-item>
+          <el-form-item label="收货人手机">
+            <el-input v-model="formInline.user" placeholder="请选择时间"></el-input>
+          </el-form-item>
+          <el-form-item label="会员账号">
+            <el-input v-model="formInline.user" placeholder="请选择时间"></el-input>
+          </el-form-item>
+          <el-form-item label="收获地址">
+            <el-select v-model="formInline.region" placeholder="请选择活动区域">
+              <el-option label="区域一" value="shanghai"></el-option>
+              <el-option label="区域二" value="beijing"></el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="配送方式">
+            <el-select v-model="formInline.region" placeholder="请选择活动区域">
+              <el-option label="区域一" value="shanghai"></el-option>
+              <el-option label="区域二" value="beijing"></el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="订单类型">
+            <el-select v-model="formInline.region" placeholder="请选择活动区域">
+              <el-option label="区域一" value="shanghai"></el-option>
+              <el-option label="区域二" value="beijing"></el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="来源小程序">
+            <el-select v-model="formInline.region" placeholder="请选择活动区域">
+              <el-option label="区域一" value="shanghai"></el-option>
+              <el-option label="区域二" value="beijing"></el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="付款方式">
+            <el-select v-model="formInline.region" placeholder="请选择活动区域">
+              <el-option label="区域一" value="shanghai"></el-option>
+              <el-option label="区域二" value="beijing"></el-option>
+            </el-select>
+          </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="onSubmit">搜索</el-button>
-          </el-form-item>
-        </el-form>
-        <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="开始行数">
-            <el-input v-model="formInline.user" placeholder="输入开始行数"></el-input>
-          </el-form-item>
-          <el-form-item label="导出行数">
-            <el-input v-model="formInline.user" placeholder="输入结尾行数"></el-input>
-          </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="onSubmit">批量导出</el-button>
+            <el-button type="primary" @click="onSubmit">筛选</el-button>
+            <el-button type="primary" @click="onSubmit">生产报表</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -148,9 +198,23 @@ export default {
     }
   }
   .conter {
-    width: auto;
+    width: 91rem;
+    height: auto;
     padding: 1rem;
     text-align: left;
+    form{
+      
+      .el-form-item{
+        width: 21.25rem;
+        .el-form-item__label{
+          color: red !important;
+          width: 5.5rem !important;
+        }
+        .el-form-item__content{
+          width: 15.5rem;
+        }
+      }
+    }
   }
   .el-table .warning-row {
     background: oldlace;

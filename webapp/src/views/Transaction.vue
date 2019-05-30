@@ -36,7 +36,9 @@
                 <span>订单管理</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="3-1">所有订单</el-menu-item>
+                <router-link to="/allOrders">
+                  <el-menu-item index="3-1">所有订单</el-menu-item>
+                </router-link>
                 <el-menu-item index="3-2">代发货订单</el-menu-item>
                 <el-menu-item index="3-3">上门自提订单</el-menu-item>
                 <el-menu-item index="3-4">维权订单</el-menu-item>

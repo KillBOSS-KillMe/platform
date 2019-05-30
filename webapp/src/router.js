@@ -53,6 +53,11 @@ export default new Router({
         path: '/inOrOutDetail',
         name: 'inOrOutDetail',
         component: () => import('@/components/transaction/InOrOutDetail')
+      },{
+        // 所哟订单
+        path: '/allOrders',
+        name: 'allOrders',
+        component: () => import('@/components/transaction/AllOrders')
       }]
     },
     
