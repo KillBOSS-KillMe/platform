@@ -79,7 +79,7 @@
         </div>
         <div class="pageShow" @drop='getDrop($event)' @dragover='allowDrop($event)'></div>
       </div>
-      <div class="adjustment">1</div>
+      <div class="adjustment" @drop='remove($event)' @dragover='allowDrop($event)'>1</div>
     </div>
 
 
@@ -91,12 +91,12 @@
          <div v-html="item"></div>
         
       </div> -->
-      <div draggable="true" data-type="1" id="component1dom">
-        <i class="deleteDom iconfont icon-shouye" v-on:click="removedrap($event)"></i>
+      <div draggable="true" data-type="1" id="component1dom" @dragstart='copyDrop($event)'>
+        <i class="deleteDom iconfont icon-shouye"></i>
         <img src="@/assets/logo.png" />
       </div>
-      <div draggable="true" data-type="2" id="component2dom">
-        <i class="deleteDom iconfont icon-shouye" @click="removedrap($event)"></i>
+      <div draggable="true" data-type="2" id="component2dom" @dragstart='copyDrop($event)'>
+        <i class="deleteDom iconfont icon-shouye"></i>
         <img src="@/assets/logo.png" />
       </div>
     </div>
@@ -120,41 +120,55 @@ export default {
   },
   mounted(){
     
-    this.getDomList()
+    // this.getDomList()
   },
   methods:{
     copyDrop(e) {
+      console.log('copyDrop')
       e.dataTransfer.setData("id", e.target.id);
-        // e.dataTransfer.setData('addBuffer', e.target.id)
-        this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
+      // e.dataTransfer.setData('addBuffer', e.target.id)
+      this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
     },
     getDrop(e) {
-        e.preventDefault()
-        var id = e.dataTransfer.getData('id')
-        if (id === null || id === '') {
-          console.log('id is NULL！')
-          return
-        }
-        var itemName = 'item' + parseInt(Math.random() * (1000000 - 1 + 1) + 1)
-        console.log('GET-> addBuffer:', itemName)
-        // 克隆真实对象
-        var cloneObject = document.getElementById(id+'dom').cloneNode(true)
+      e.preventDefault()
+      var id = e.dataTransfer.getData('id')
+      if (id === null || id === '') {
+        console.log('id is NULL！')
+        return
+      }
+      var itemName = 'item' + parseInt(Math.random() * (1000000 - 1 + 1) + 1)
+      console.log('GET-> addBuffer:', itemName)
+      // 克隆真实对象
+      var cloneObject = document.getElementById(id+'dom')
 
-        // 为克隆对象设置唯一Id
-        cloneObject.setAttribute('id', itemName)
-        this.$set(cloneObject, 'id', itemName)
-        this.$set(cloneObject, '@click', 'removedrap($event)')
-        // 把新的节点添加到新的区域中
-        e.target.appendChild(cloneObject)
-        
-        console.log(e.target.id)
-        // console.log(cloneObject)
-        // 设置样式
-        this.CopyCss(id, '', '', '')
+      // 为克隆对象设置唯一Id
+      console.log(cloneObject)
+      cloneObject.setAttribute('id', itemName)
+      console.log(cloneObject)
+      // cloneObject.setAttribute('ondragstart', 'copyDrop(e)')
+      // this.$set(cloneObject, 'id', itemName)
+      // this.$set(cloneObject, '@click', 'removedrap($event)')
+      // this.$set(cloneObject, '@dragstart', 'copyDrop($event)')
+      // 把新的节点添加到新的区域中
+      e.target.appendChild(cloneObject)
+      
+      console.log(e.target.id)
+      // console.log(cloneObject)
+      // 设置样式
+      this.CopyCss(id, '', '', '')
 
-        // 修改名称
-        this.dialogFormVisible = true
-        this.labelid = itemName
+      // 修改名称
+      this.dialogFormVisible = true
+      this.labelid = itemName
+    },
+    remove(e) {
+      e.preventDefault()
+      var id = e.dataTransfer.getData('id')
+      console.log(id)
+      if (id === null || id === '') {
+        console.log('id is NULL！')
+        return
+      }
     },
     allowDrop(e) {
       e.preventDefault();
@@ -168,15 +182,15 @@ export default {
         //   <i class="iconfont icon-shouye"></i>
         //   <img src="@/assets/logo.png" />
         // </div>`,
-        `<div draggable="true" data-type="2" id="component2dom">
+        `<div draggable="true" data-type="2" id="component2dom" ondragstart='copyDrop($event)'>
           <i class="iconfont icon-shouye"></i>
           <img src="@/assets/logo.png" />
         </div>`,
-        `<div draggable="true" data-type="3" id="component3dom">
+        `<div draggable="true" data-type="3" id="component3dom" ondragstart='copyDrop($event)'>
           <i class="iconfont icon-shouye"></i>
           <img src="@/assets/logo.png" />
         </div>`,
-        `<div draggable="true" data-type="4" id="component4dom">
+        `<div draggable="true" data-type="4" id="component4dom" ondragstart='copyDrop($event)'>
           <i class="iconfont icon-shouye"></i>
           <img src="@/assets/logo.png" />
         </div>`
