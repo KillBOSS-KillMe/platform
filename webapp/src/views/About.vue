@@ -230,7 +230,9 @@ export default {
     margin: 1rem;
     color: #343434;
     font-size: .8rem;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     i{
       color: #f98a10;
       font-size: .8rem;
@@ -382,6 +384,11 @@ export default {
       color: #343434;
       .iconfont{
         margin: .2rem;
+      }
+      div{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
       }
     }
     .pageInfo{
