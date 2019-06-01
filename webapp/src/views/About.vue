@@ -79,7 +79,7 @@
         </div>
         <div class="pageShow" @drop='getDrop($event)' @dragover='allowDrop($event)'></div>
       </div>
-      <div class="adjustment" @drop='remove($event)' @dragover='allowDrop($event)'>1</div>
+      <div class="adjustment" @drop='removedrap($event)' @dragover='allowDrop($event)'>1</div>
     </div>
 
 
@@ -127,20 +127,22 @@ export default {
       console.log('copyDrop')
       e.dataTransfer.setData("id", e.target.id);
       // e.dataTransfer.setData('addBuffer', e.target.id)
-      this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
+      // this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
     },
     getDrop(e) {
       e.preventDefault()
+      console.log(e)
       var id = e.dataTransfer.getData('id')
+      console.log(id)
       if (id === null || id === '') {
         console.log('id is NULL！')
         return
       }
-      var itemName = 'item' + parseInt(Math.random() * (1000000 - 1 + 1) + 1)
+      var itemName = id + parseInt(Math.random() * (1000000 - 1 + 1) + 1)
       console.log('GET-> addBuffer:', itemName)
       // 克隆真实对象
+      // var cloneObject = document.getElementById(id+'dom').cloneNode(true)
       var cloneObject = document.getElementById(id+'dom')
-
       // 为克隆对象设置唯一Id
       console.log(cloneObject)
       cloneObject.setAttribute('id', itemName)
@@ -161,45 +163,19 @@ export default {
       this.dialogFormVisible = true
       this.labelid = itemName
     },
-    remove(e) {
-      e.preventDefault()
-      var id = e.dataTransfer.getData('id')
-      console.log(id)
-      if (id === null || id === '') {
-        console.log('id is NULL！')
-        return
-      }
-    },
     allowDrop(e) {
+      console.log('allowDrop')
       e.preventDefault();
-      // var data = e.dataTransfer.getData("id");
+      var data = e.dataTransfer.getData("id");
       // e.target.appendChild(document.getElementById(data+'dom'));
     },
-    getDomList() {
-      console.log(22222)
-      this.domList = [
-        // `<div draggable="true" data-type="1" id="component1dom">
-        //   <i class="iconfont icon-shouye"></i>
-        //   <img src="@/assets/logo.png" />
-        // </div>`,
-        `<div draggable="true" data-type="2" id="component2dom" ondragstart='copyDrop($event)'>
-          <i class="iconfont icon-shouye"></i>
-          <img src="@/assets/logo.png" />
-        </div>`,
-        `<div draggable="true" data-type="3" id="component3dom" ondragstart='copyDrop($event)'>
-          <i class="iconfont icon-shouye"></i>
-          <img src="@/assets/logo.png" />
-        </div>`,
-        `<div draggable="true" data-type="4" id="component4dom" ondragstart='copyDrop($event)'>
-          <i class="iconfont icon-shouye"></i>
-          <img src="@/assets/logo.png" />
-        </div>`
-      ]
-    },
-      // 移除放下
+    // 移除放下
     removedrap(e) {
       console.log('deldeldeldeldeldeldeldeldeldel')
-      removeid = e.dataTransfer.getData('removeBuffer')
+      console.log(e)
+      var removeid = e.dataTransfer.getData('id')
+      // var removeid = 'component1dom'
+      console.log(removeid)
       if (removeid === null || removeid === '') {
         console.log('removeId == null')
         return
