@@ -106,7 +106,9 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
-
+$(function () {
+  alert('引入成功')
+})
 export default {
   name: 'workshop',
   components: {
