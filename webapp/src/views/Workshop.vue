@@ -124,63 +124,45 @@ export default {
   },
   methods:{
     copyDrop(e) {
-      console.log('copyDrop')
       e.dataTransfer.setData("id", e.target.id);
-      // e.dataTransfer.setData('addBuffer', e.target.id)
-      // this.CopyCss(e.target.id, '1px dashed #66CC99', 'rgba(204,204,204,0.3)', '4px')
+    },
+    copyDrop2(e) {
+      e.dataTransfer.setData("id", e.path[1].id);
+    },
+    allowDrop(e) {
+      e.preventDefault();
     },
     getDrop(e) {
       e.preventDefault()
-      console.log(e)
       var id = e.dataTransfer.getData('id')
-      console.log(id)
       if (id === null || id === '') {
         console.log('id is NULL！')
         return
       }
       var itemName = id + parseInt(Math.random() * (1000000 - 1 + 1) + 1)
-      console.log('GET-> addBuffer:', itemName)
       // 克隆真实对象
-      // var cloneObject = document.getElementById(id+'dom').cloneNode(true)
-      var cloneObject = document.getElementById(id+'dom')
+      var cloneObject = document.getElementById(id+'dom').cloneNode(true)
       // 为克隆对象设置唯一Id
-      console.log(cloneObject)
       cloneObject.setAttribute('id', itemName)
-      console.log(cloneObject)
-      // cloneObject.setAttribute('ondragstart', 'copyDrop(e)')
+      // 事件追加绑定
+      cloneObject.addEventListener('dragstart', this.copyDrop2)
       // this.$set(cloneObject, 'id', itemName)
-      // this.$set(cloneObject, '@click', 'removedrap($event)')
-      // this.$set(cloneObject, '@dragstart', 'copyDrop($event)')
       // 把新的节点添加到新的区域中
       e.target.appendChild(cloneObject)
-      
-      console.log(e.target.id)
-      // console.log(cloneObject)
-      // 设置样式
       this.CopyCss(id, '', '', '')
 
       // 修改名称
       this.dialogFormVisible = true
       this.labelid = itemName
     },
-    allowDrop(e) {
-      console.log('allowDrop')
-      e.preventDefault();
-      var data = e.dataTransfer.getData("id");
-      // e.target.appendChild(document.getElementById(data+'dom'));
-    },
     // 移除放下
     removedrap(e) {
-      console.log('deldeldeldeldeldeldeldeldeldel')
-      console.log(e)
+      e.preventDefault()
       var removeid = e.dataTransfer.getData('id')
-      // var removeid = 'component1dom'
-      console.log(removeid)
       if (removeid === null || removeid === '') {
         console.log('removeId == null')
         return
       }
-      console.log('移除节点放下ID：', removeid)
       // 删除节点
       document.getElementById(removeid).parentNode.removeChild(document.getElementById(removeid));
     },
