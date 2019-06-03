@@ -14,9 +14,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('@/views/About')
+      path: '/workshop',
+      name: 'workshop',
+      component: () => import('@/views/Workshop')
     },
     {
       // 营销页
