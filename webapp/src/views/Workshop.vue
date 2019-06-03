@@ -77,7 +77,7 @@
           <span>页面名称</span>
           <i class="iconfont icon-shouye"></i>
         </div>
-        <div class="pageShow" @drop='getDrop($event)' @dragover='allowDrop($event)'></div>
+        <div id="pageModel" class="pageShow" @drop='getDrop($event)' @dragover='allowDrop($event)'></div>
       </div>
       <div class="adjustment" @drop='removedrap($event)' @dragover='allowDrop($event)'>1</div>
     </div>
@@ -154,6 +154,8 @@ export default {
       // 修改名称
       this.dialogFormVisible = true
       this.labelid = itemName
+      // 获取手机模型中的子元素
+      this.findChildren()
     },
     // 移除放下
     removedrap(e) {
@@ -165,6 +167,8 @@ export default {
       }
       // 删除节点
       document.getElementById(removeid).parentNode.removeChild(document.getElementById(removeid));
+      // 获取手机模型中的子元素
+      this.findChildren()
     },
     CopyCss(obj, border, background, borderradius) {
       let moveObj = document.getElementById(obj)
@@ -172,7 +176,21 @@ export default {
       moveObj.style.background = background
       moveObj.style.borderRadius = borderradius
     },
+    findChildren() {
+      var domList = document.getElementById("pageModel").children
+      console.log(domList)
+      var i  = 0;
+      var domListNode = []
+      for (i in domList) {
+        let typeData = document.getElementById(domList[i].id).getAttribute('data-type')
+        let domNode = {"type": typeData, "data": {}}
+        domListNode.push(domNode)
+        console.log(domListNode)
+      }
+      
+    }
   },
+ 
   
 
 }
