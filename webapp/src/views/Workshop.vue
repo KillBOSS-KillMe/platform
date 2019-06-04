@@ -115,6 +115,7 @@ export default {
   data(){
     return {
       domList:[],
+      domListNode: [],
       isOpenWind :true  //点击X关闭窗口
     }
   },
@@ -177,17 +178,18 @@ export default {
       moveObj.style.borderRadius = borderradius
     },
     findChildren() {
-      var domList = document.getElementById("pageModel").children
+      var domList =  $("#pageModel").children()
       console.log(domList)
       var i  = 0;
       var domListNode = []
-      for (i in domList) {
-        let typeData = document.getElementById(domList[i].id).getAttribute('data-type')
+      for (let i = 0; i < domList.length; i++) {
+        let typeData = $("#"+domList[i].id).attr('data-type')
         let domNode = {"type": typeData, "data": {}}
         domListNode.push(domNode)
         console.log(domListNode)
       }
-      
+      console.log(domListNode)
+      this.domListNode = domListNode
     }
   },
  
