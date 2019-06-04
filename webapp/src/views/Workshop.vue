@@ -79,7 +79,8 @@
         </div>
         <div id="pageModel" class="pageShow" @drop='getDrop($event)' @dragover='allowDrop($event)'></div>
       </div>
-      <div class="adjustment" @drop='removedrap($event)' @dragover='allowDrop($event)'>1</div>
+      <div class="delDom" @drop='removedrap($event)' @dragover='allowDrop($event)'>1</div>
+      <div class="adjustment">1</div>
     </div>
 
 
@@ -179,16 +180,13 @@ export default {
     },
     findChildren() {
       var domList =  $("#pageModel").children()
-      console.log(domList)
       var i  = 0;
       var domListNode = []
       for (let i = 0; i < domList.length; i++) {
         let typeData = $("#"+domList[i].id).attr('data-type')
         let domNode = {"type": typeData, "data": {}}
         domListNode.push(domNode)
-        console.log(domListNode)
       }
-      console.log(domListNode)
       this.domListNode = domListNode
     }
   },
@@ -251,6 +249,14 @@ export default {
       margin-right: 1.5rem;
       width: 16.2rem;
       height: 33rem;
+    }
+    .delDom{
+      margin: 0 1rem;
+      margin-right: 1.5rem;
+      width: 3rem;
+      height: auto;
+      border: 1px solid #999;
+      border-radius: 1rem;
     }
     .adjustment{
       margin: 0 1rem;
