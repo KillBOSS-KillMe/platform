@@ -1,13 +1,42 @@
 <template>
   <div id="app">
-    <router-view/>
+    <header id="header">
+      <router-link to="/">
+        <img src="./../assets/logo.png">
+        贝肯为微信平台
+      </router-link>
+      <div class="nav">
+        <router-link to="/">小程序</router-link>
+        <router-link to="/">公众号</router-link>
+        <router-link to="/">会员</router-link>
+        <router-link to="/marketing">营销</router-link>
+        <router-link to="/transaction">交易</router-link>
+        <router-link to="/">设置</router-link>
+      </div>
+      <div class="operating">
+        <div>用户名</div>
+        <div>注销登录</div>
+      </div>
+    </header>
+    
+    <div class="page">
+      <router-view/>
+      <div class="floatDom">
+        <div>联系客服</div>
+        <div>帮助教程</div>
+        <div>新手引导</div>
+        <div>商家社区</div>
+        <div>意见反馈</div>
+        <div>开放平台</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'app',
+  name: 'homecli',
   data(){
      return {
         'navDatra' : []
