@@ -28,9 +28,7 @@
               </div>
             </div>
             <div class="ivu-form-item">
-              <!-- <router-link to="/Homecli"> -->
                 <button class="login-btn" @click="loginss">登录</button>
-              <!-- </router-link> -->
             </div>
             <div class="ivu-form-item-content input-box">
               <div class="ivu-col ivu-col-span-12">
