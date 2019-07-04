@@ -14,7 +14,7 @@ export default new Router({
       component: Login
     },
     {
-      path: '/Homecli',
+      path: '/homecli',
       name: 'homecli',
       redirect: '/Home',
       component: () => import('@/views/Homecli'),

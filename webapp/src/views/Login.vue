@@ -1,6 +1,7 @@
 <template>
   <div>
     <canvas id="canv"></canvas>
+    <img class="login-logo" src="@/assets/logo.png">
     <div class="loginDom">
       <div class="login">
         <div class="login-mainbox">
@@ -27,7 +28,9 @@
               </div>
             </div>
             <div class="ivu-form-item">
-              <button class="login-btn">登录</button>
+              <!-- <router-link to="/Homecli"> -->
+                <button class="login-btn" @click="loginss">登录</button>
+              <!-- </router-link> -->
             </div>
             <div class="ivu-form-item-content input-box">
               <div class="ivu-col ivu-col-span-12">
@@ -41,13 +44,13 @@
         </div>
         <div class="link-groups">
           <a href="https://mch.wxrrd.com/auth/login" target="_blank" class="link-item">
-            <img src="https://s.dodoca.com/applet_mch/images/login/renren.png?v=2" alt="">
+            <img src="https://s.dodoca.com/applet_mch/images/login/renren.png?v=2" />
           </a>
           <a href="https://mch.wxrrd.com/auth/login" target="_blank" class="link-item">
-            <img src="https://s.dodoca.com/applet_mch/images/login/renren.png?v=2" alt="">
+            <img src="https://s.dodoca.com/applet_mch/images/login/renren.png?v=2" />
           </a>
           <a href="https://mch.wxrrd.com/auth/login" target="_blank" class="link-item">
-            <img src="https://s.dodoca.com/applet_mch/images/login/renren.png?v=2" alt="">
+            <img src="https://s.dodoca.com/applet_mch/images/login/renren.png?v=2" />
           </a>
           <div class="other">
             <a href="http://wsy.dodoca.com/login?redirect=%2F" target="_blank">微商易</a>
@@ -67,14 +70,31 @@ export default {
   name: "login",
   data() {
     return {
-      num: 200,
-      w: 0,
-      h: 0,
-      max: 100,
-      _x: 0,
-      _y: 0,
-      _z: 0
+      
     };
+  },
+  methods: {
+    loginss() {
+      console.log('登录接口调用')
+      let id = 1;
+      this.$router.push({
+        path: `/homecli?id=${id}`
+      })
+    },
+    dtr(d) {
+      return (d * Math.PI) / 180;
+    },
+
+    rnd() {
+      return Math.sin((Math.floor(Math.random() * 360) * Math.PI) / 180);
+    },
+    dist(p1, p2, p3) {
+      return Math.sqrt(
+        Math.pow(p2.x - p1.x, 2) +
+          Math.pow(p2.y - p1.y, 2) +
+          Math.pow(p2.z - p1.z, 2)
+      );
+    }
   },
   mounted() {
     var num = 200;
@@ -456,23 +476,8 @@ export default {
       },
       false
     );
-  },
-  methods: {
-    dtr(d) {
-      return (d * Math.PI) / 180;
-    },
-
-    rnd() {
-      return Math.sin((Math.floor(Math.random() * 360) * Math.PI) / 180);
-    },
-    dist(p1, p2, p3) {
-      return Math.sqrt(
-        Math.pow(p2.x - p1.x, 2) +
-          Math.pow(p2.y - p1.y, 2) +
-          Math.pow(p2.z - p1.z, 2)
-      );
-    }
   }
+
   //   var num = 200;
   // var w = window.innerWidth;
   // var h = window.innerHeight;
@@ -556,6 +561,13 @@ body {
     outline: 0;
     cursor: pointer;
     transition: color .2s ease;
+  }
+  .link-item{
+    margin-right: 10px;
+  }
+  .link-item,img{
+    width: 173px;
+    height: 50px;
   }
   .other{
     width: 311px;
@@ -648,6 +660,13 @@ body {
       color: #fff;
     }
   }
+}
+.login-logo{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 130px;
+  height: 50px;
 }
 
 
