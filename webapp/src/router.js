@@ -37,9 +37,30 @@ export default new Router({
         component: () => import('@/views/Marketing'),
         // 子页跳转
         children: [{
+          // 营销页--首页
           path: '/marketingCenter',
           name: 'marketingCenter',
           component: () => import('@/components/marketing/MarketingCenter')
+        }, {
+          // 优惠券
+          path: '/coupon',
+          name: 'coupon',
+          component: () => import('@/components/marketing/Coupon')
+        }, {
+          // 满减
+          path: '/fullReduction',
+          name: 'fullReduction',
+          component: () => import('@/components/marketing/FullReduction')
+        }, {
+          // 秒杀
+          path: '/spike',
+          name: 'spike',
+          component: () => import('@/components/marketing/Spike')
+        }, {
+          // 砍价
+          path: '/bargain',
+          name: 'bargain',
+          component: () => import('@/components/marketing/Bargain')
         }]
       },
       {

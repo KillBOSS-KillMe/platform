@@ -60,11 +60,11 @@
               <img class="QRCodeImg" src="@/assets/logo.png">
             </div>
             <div class="programInfo">
-              <div class="iconfont icon-shouye programIcon"></div>
+              <div class="iconfont icon-31aichegujia programIcon"></div>
               <div>
                 <div class="programName">小程序名称</div>
                 <div class="time"> 
-                  <icon class="iconfont icon-shouye"></icon>
+                  <icon class="iconfont icon-31aichegujia"></icon>
                   2019-05-05 18:11:11
                 </div>
               </div>
@@ -72,20 +72,20 @@
             <div class="operating">
               <div>
                 <router-link to="/workshop">
-                  <icon class="iconfont icon-shouye"></icon>
+                  <icon class="iconfont icon-31aichegujia"></icon>
                   装修
                 </router-link>
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 数据
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 设置
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 删除
               </div>
             </div>
@@ -106,30 +106,30 @@
               <img class="QRCodeImg" src="@/assets/logo.png">
             </div>
             <div class="programInfo">
-              <div class="iconfont icon-shouye programIcon"></div>
+              <div class="iconfont icon-31aichegujia programIcon"></div>
               <div>
                 <div class="programName">小程序名称</div>
                 <div class="time"> 
-                  <icon class="iconfont icon-shouye"></icon>
+                  <icon class="iconfont icon-31aichegujia"></icon>
                   2019-05-05 18:11:11
                 </div>
               </div>
             </div>
             <div class="operating">
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 装修
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 数据
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 设置
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 删除
               </div>
             </div>
@@ -150,30 +150,30 @@
               <img class="QRCodeImg" src="@/assets/logo.png">
             </div>
             <div class="programInfo">
-              <div class="iconfont icon-shouye programIcon"></div>
+              <div class="iconfont icon-31aichegujia programIcon"></div>
               <div>
                 <div class="programName">小程序名称</div>
                 <div class="time"> 
-                  <icon class="iconfont icon-shouye"></icon>
+                  <icon class="iconfont icon-31aichegujia"></icon>
                   2019-05-05 18:11:11
                 </div>
               </div>
             </div>
             <div class="operating">
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 装修
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 数据
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 设置
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 删除
               </div>
             </div>
@@ -194,30 +194,30 @@
               <img class="QRCodeImg" src="@/assets/logo.png">
             </div>
             <div class="programInfo">
-              <div class="iconfont icon-shouye programIcon"></div>
+              <div class="iconfont icon-31aichegujia programIcon"></div>
               <div>
                 <div class="programName">小程序名称</div>
                 <div class="time"> 
-                  <icon class="iconfont icon-shouye"></icon>
+                  <icon class="iconfont icon-31aichegujia"></icon>
                   2019-05-05 18:11:11
                 </div>
               </div>
             </div>
             <div class="operating">
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 装修
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 数据
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 设置
               </div>
               <div>
-                <icon class="iconfont icon-shouye"></icon>
+                <icon class="iconfont icon-31aichegujia"></icon>
                 删除
               </div>
             </div>
@@ -234,16 +234,16 @@
         </div>
         <div class="con">
           <div class="item novice">
-            <icon class="iconfont icon-shouye"></icon>
+            <icon class="iconfont icon-31aichegujia"></icon>
             新手引导
           </div>
           <div class="item Application">
-            <icon class="iconfont icon-shouye"></icon>
+            <icon class="iconfont icon-31aichegujia"></icon>
             新手引导<br>
             新手引导
           </div>
           <div class="item release">
-            <icon class="iconfont icon-shouye"></icon>
+            <icon class="iconfont icon-31aichegujia"></icon>
             新手引导<br>
             新手引导
           </div>
@@ -275,18 +275,18 @@
       <div class="messageSys">
         <div class="title">
           <div class="name">
-            <icon class="iconfont icon-shouye"></icon>
+            <icon class="iconfont icon-31aichegujia"></icon>
             消息通知
           </div>
           <div class="more">
             更多
-            <icon class="iconfont icon-shouye"></icon>
+            <icon class="iconfont icon-31aichegujia"></icon>
           </div>
         </div>
         <div class="con">
           <div class="item">
             <div class="messageCon">
-              <icon class="iconfont icon-shouye"></icon>
+              <icon class="iconfont icon-31aichegujia"></icon>
               <div>【系统公告】公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</div>
               <img src="@/assets/logo.png">
             </div>
@@ -294,7 +294,7 @@
           </div>
           <div class="item">
             <div class="messageCon">
-              <icon class="iconfont icon-shouye"></icon>
+              <icon class="iconfont icon-31aichegujia"></icon>
               <div>【系统公告】公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</div>
               <img src="@/assets/logo.png">
             </div>
@@ -302,7 +302,7 @@
           </div>
           <div class="item">
             <div class="messageCon">
-              <icon class="iconfont icon-shouye"></icon>
+              <icon class="iconfont icon-31aichegujia"></icon>
               <div>【系统公告】公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</div>
               <img src="@/assets/logo.png">
             </div>
@@ -310,7 +310,7 @@
           </div>
           <div class="item">
             <div class="messageCon">
-              <icon class="iconfont icon-shouye"></icon>
+              <icon class="iconfont icon-31aichegujia"></icon>
               <div>【系统公告】公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</div>
               <img src="@/assets/logo.png">
             </div>
@@ -318,7 +318,7 @@
           </div>
           <div class="item">
             <div class="messageCon">
-              <icon class="iconfont icon-shouye"></icon>
+              <icon class="iconfont icon-31aichegujia"></icon>
               <div>【系统公告】公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</div>
               <img src="@/assets/logo.png">
             </div>
@@ -328,7 +328,7 @@
       </div>
       <div class="feedback">
         <div class="item">
-          <icon class="iconfont icon-shouye"></icon>
+          <icon class="iconfont icon-31aichegujia"></icon>
           <div class="con">
             <div class="name">遇到问题</div>
             <div class="description">
@@ -338,7 +338,7 @@
           </div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-shouye"></icon>
+          <icon class="iconfont icon-31aichegujia"></icon>
           <div class="con">
             <div class="name">商家社区</div>
             <div class="description">
@@ -348,7 +348,7 @@
           </div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-shouye"></icon>
+          <icon class="iconfont icon-31aichegujia"></icon>
           <div class="con">
             <div class="name">意见反馈</div>
             <div class="description">
