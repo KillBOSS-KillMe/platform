@@ -10,12 +10,7 @@
             @open="handleOpen"
             @close="handleClose"
           >
-            <router-link to="/marketingCenter">
-              <el-menu-item index="1">
-                <i class="el-icon-menu"></i>
-                <span slot="title">营销中心</span>
-              </el-menu-item>
-            </router-link>
+            
             <!-- <el-submenu index="2">
               <template slot="title">
                 <i class="el-icon-location"></i>
@@ -43,98 +38,104 @@
                 <el-menu-item index="3-9">核销记录</el-menu-item>
               </el-menu-item-group>
             </el-submenu>-->
+            <router-link to="/marketingCenter">
+              <el-menu-item index="1">
+                <i class="el-icon-menu"></i>
+                <span slot="title">营销中心</span>
+              </el-menu-item>
+            </router-link>
             <router-link to="/coupon">
-              <el-menu-item index="4">
+              <el-menu-item index="2">
                 <i class="el-icon-menu"></i>
                 <span slot="title">优惠券</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="5">
+            <router-link to="/fightGroup">
+              <el-menu-item index="3">
                 <i class="el-icon-menu"></i>
                 <span slot="title">拼团</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/spike">
+              <el-menu-item index="4">
                 <i class="el-icon-menu"></i>
                 <span slot="title">秒杀</span>
               </el-menu-item>
             </router-link>
             <router-link to="/fullReduction">
-              <el-menu-item index="6">
+              <el-menu-item index="5">
                 <i class="el-icon-menu"></i>
                 <span slot="title">满减</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
+            <router-link to="/bargain">
               <el-menu-item index="6">
                 <i class="el-icon-menu"></i>
                 <span slot="title">砍价</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/integral">
+              <el-menu-item index="7">
                 <i class="el-icon-menu"></i>
                 <span slot="title">积分</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/live">
+              <el-menu-item index="8">
                 <i class="el-icon-menu"></i>
                 <span slot="title">直播</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/payment">
+              <el-menu-item index="9">
                 <i class="el-icon-menu"></i>
                 <span slot="title">知识付费</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/reservation">
+              <el-menu-item index="10">
                 <i class="el-icon-menu"></i>
                 <span slot="title">产品预约</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/proxy">
+              <el-menu-item index="11">
                 <i class="el-icon-menu"></i>
                 <span slot="title">代理</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/distribution">
+              <el-menu-item index="12">
                 <i class="el-icon-menu"></i>
                 <span slot="title">分销</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/share">
+              <el-menu-item index="13">
                 <i class="el-icon-menu"></i>
                 <span slot="title">分享</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/vip">
+              <el-menu-item index="14">
                 <i class="el-icon-menu"></i>
                 <span slot="title">会员</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/news">
+              <el-menu-item index="15">
                 <i class="el-icon-menu"></i>
                 <span slot="title">资讯</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/delivery">
+              <el-menu-item index="16">
                 <i class="el-icon-menu"></i>
                 <span slot="title">快递</span>
               </el-menu-item>
             </router-link>
-            <router-link to="/marketingCenter">
-              <el-menu-item index="6">
+            <router-link to="/extract">
+              <el-menu-item index="17">
                 <i class="el-icon-menu"></i>
                 <span slot="title">自提</span>
               </el-menu-item>

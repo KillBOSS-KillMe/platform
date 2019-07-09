@@ -56,12 +56,74 @@ export default new Router({
           path: '/spike',
           name: 'spike',
           component: () => import('@/components/marketing/Spike')
+        },{
+          // 拼团
+          path: '/fightGroup',
+          name: 'fightGroup',
+          component: () => import('@/components/marketing/FightGroup')
         }, {
           // 砍价
           path: '/bargain',
           name: 'bargain',
           component: () => import('@/components/marketing/Bargain')
+        }, {
+          // 积分
+          path: '/integral',
+          name: 'integral',
+          component: () => import('@/components/marketing/Integral')
+        }, {
+          // 直播
+          path: '/live',
+          name: 'live',
+          component: () => import('@/components/marketing/Live')
+        }, {
+          // 知识付费
+          path: '/payment',
+          name: 'payment',
+          component: () => import('@/components/marketing/Payment')
+        }, {
+          // 产品预约
+          path: '/reservation',
+          name: 'reservation',
+          component: () => import('@/components/marketing/Reservation')
+        }, {
+          // 代理
+          path: '/proxy',
+          name: 'proxy',
+          component: () => import('@/components/marketing/Proxy')
+        }, {
+          // 分销
+          path: '/distribution',
+          name: 'distribution',
+          component: () => import('@/components/marketing/Distribution')
+        }, {
+          // 分享
+          path: '/share',
+          name: 'share',
+          component: () => import('@/components/marketing/Share')
+        }, {
+          // 会员
+          path: '/vip',
+          name: 'vip',
+          component: () => import('@/components/marketing/Vip')
+        }, {
+          // 资讯
+          path: '/news',
+          name: 'news',
+          component: () => import('@/components/marketing/News')
+        }, {
+          // 快递
+          path: '/delivery',
+          name: 'delivery',
+          component: () => import('@/components/marketing/Delivery')
+        }, {
+          // 自提
+          path: '/extract',
+          name: 'extract',
+          component: () => import('@/components/marketing/Extract')
         }]
+
+        // delivery
       },
       {
         // 交易页
