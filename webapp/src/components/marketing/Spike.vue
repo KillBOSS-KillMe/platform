@@ -1,7 +1,7 @@
 <template>
   <div class="con">
     <div class="charts">
-      <h3 class="title">优惠券</h3>
+      <h3 class="title">秒杀</h3>
       <div class="conter">
         <div class="selType">
           <div class="item">
