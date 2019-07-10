@@ -5,24 +5,17 @@
       <div class="conter">
         <div class="selType">
           <div class="item">
-            <div>全部</div>
-            <div>未生效</div>
-            <div>已生效</div>
-            <div>已失效</div>
+            <div class="type">全部</div>
+            <div class="type">未生效</div>
+            <div class="type">已生效</div>
+            <div class="type">已失效</div>
           </div>
         </div>
         <div class="selType">
           <div class="item">
-            <label>类型:</label>
-            <div>浏览数</div>
-            <div>浏览数</div>
-            <div>浏览数</div>
-          </div>
-          <div class="item">
-            <label>时间:</label>
-            <div>浏览数</div>
-            <div>浏览数</div>
-            <div class="active">浏览数</div>
+            <el-button type="success" icon="el-icon-search">搜索</el-button>
+            <el-input v-model="input" placeholder="请输入内容"></el-input>
+            <el-button type="primary">主要按钮</el-button>
           </div>
         </div>
       </div>
@@ -172,23 +165,23 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // flex-wrap: wrap;
     .selType {
-      // width: 100%;
       display: flex;
       align-items: center;
-      // justify-content: flex-start;
       .item {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         margin-right: 1rem;
+        .el-input{
+          margin: 0 1rem;
+        }
         label {
           font-size: 0.75rem;
           color: #5a5a5a;
           font-weight: 600;
         }
-        div {
+        .type{
           font-size: 0.75rem;
           padding: 0.3rem 0.75rem;
           border: 1px solid #c4c4c4;
@@ -197,7 +190,7 @@ export default {
           margin: 0 0.5rem;
         }
         .active,
-        div:hover {
+        .type:hover {
           background-color: #3889fc;
           border-color: #3889fc;
           color: #fff;
