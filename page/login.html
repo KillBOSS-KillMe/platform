@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/login.css">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+
+<body>
+  <div>
+    <canvas id="canv"></canvas>
+    <img class="login-logo" src="img/logo.png">
+    <div class="loginDom">
+      <div class="login">
+        <div class="login-mainbox">
+          <div class="login-left">
+            <img src="img/login-img-1.png">
+          </div>
+          <div class="login-wrap">
+            <div class="login-header-text">
+              <img src="img/logo.png">
+              <span class="name">贝肯伟</span>·
+              <span>小程序</span>
+            </div>
+            <input type="text" placeholder="手机号或用户名" class="ivu-input" />
+            <input type="text" placeholder="登录密码" class="ivu-input" />
+            <input type="text" placeholder="登录密码" class="ivu-input" />
+            <div class="ivu-form-item-content">
+              <div class="ivu-col ivu-col-span-12">
+                <label class="login-auto ivu-checkbox-wrapper">
+                  <input type="checkbox" name="aotulogin" />自动登录
+                </label>
+              </div>
+              <div class="ivu-col ivu-col-span-12">
+                <a href="/account/resetpassword">忘记密码?</a>
+              </div>
+            </div>
+            <div class="ivu-form-item">
+              <button class="login-btn" @click="loginss">登录</button>
+            </div>
+            <div class="ivu-form-item-content input-box">
+              <div class="ivu-col ivu-col-span-12">
+                自动登录
+              </div>
+              <div class="ivu-col ivu-col-span-12">
+                自动登录
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="link-groups">
+          <a href="https://mch.wxrrd.com/auth/login" target="_blank" class="link-item">
+            <img src="https://s.dodoca.com/applet_mch/images/login/renren.png?v=2" />
+          </a>
+          <a href="https://mch.wxrrd.com/auth/login" target="_blank" class="link-item">
+            <img src="https://s.dodoca.com/applet_mch/images/login/renren.png?v=2" />
+          </a>
+          <a href="https://mch.wxrrd.com/auth/login" target="_blank" class="link-item">
+            <img src="https://s.dodoca.com/applet_mch/images/login/renren.png?v=2" />
+          </a>
+          <div class="other">
+            <a href="http://wsy.dodoca.com/login?redirect=%2F" target="_blank">微商易</a>
+            <span style="border: 1px solid rgb(202, 201, 201);"></span>
+            <a href="http://wsy.dodoca.com/login?redirect=%2F" target="_blank">微商易</a>
+            <span style="border: 1px solid rgb(202, 201, 201);"></span>
+            <a href="http://wsy.dodoca.com/login?redirect=%2F" target="_blank">微商易</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/login.js"></script>
+</html>
