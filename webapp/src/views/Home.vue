@@ -38,10 +38,19 @@
           <span>列表中所有授权的小程序必须属于同一个公司主体账号</span>
         </div>
         <div class="button">
-          <button>创建小程序</button>
-          <button>创建小程序</button>
-          <button>创建小程序</button>
-          <button>创建小程序</button>
+          <!-- newProject -->
+          <!-- <router-link to="/newProject"> -->
+            <!-- <el-button type="text" @click="open">点击打开 Message Box</el-button> -->
+          <!-- </router-link> -->
+          <router-link to="/newProject">
+            <button>创建小程序</button>
+          </router-link>
+          <router-link to="/newProject">
+            <button>创建小程序</button>
+          </router-link>
+          <router-link to="/newProject">
+            <button>创建小程序</button>
+          </router-link>
         </div>
         <div class="list">
           <div class="item">
@@ -374,6 +383,40 @@ export default {
   name: 'home',
   components: {
     // HelloWorld
+  },
+  methods: {
+    // open() {
+    //   const h = this.$createElement;
+    //   this.$msgbox({
+    //     title: '消息',
+    //     message: h('p', null, [
+    //       h('span', null, '内容可以是 '),
+    //       h('i', { style: 'color: teal' }, 'VNode')
+    //     ]),
+    //     showCancelButton: true,
+    //     confirmButtonText: '确定',
+    //     cancelButtonText: '取消',
+    //     beforeClose: (action, instance, done) => {
+    //       if (action === 'confirm') {
+    //         instance.confirmButtonLoading = true;
+    //         instance.confirmButtonText = '执行中...';
+    //         setTimeout(() => {
+    //           done();
+    //           setTimeout(() => {
+    //             instance.confirmButtonLoading = false;
+    //           }, 300);
+    //         }, 3000);
+    //       } else {
+    //         done();
+    //       }
+    //     }
+    //   }).then(action => {
+    //     this.$message({
+    //       type: 'info',
+    //       message: 'action: ' + action
+    //     });
+    //   });
+    // }
   }
 }
 </script>

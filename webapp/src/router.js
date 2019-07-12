@@ -25,6 +25,11 @@ export default new Router({
         component: () => import('@/views/Home')
       },
       {
+        path: '/newProject',
+        name: 'newProject',
+        component: () => import('@/views/NewProject')
+      },
+      {
         path: '/workshop',
         name: 'workshop',
         component: () => import('@/views/Workshop')
@@ -122,8 +127,6 @@ export default new Router({
           name: 'extract',
           component: () => import('@/components/marketing/Extract')
         }]
-
-        // delivery
       },
       {
         // 交易页
