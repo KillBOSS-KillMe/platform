@@ -117,7 +117,7 @@ export default {
 </script>
 <style scoped lang="less">
 .con {
-  width: 93rem;
+  width: 81rem;
   height: auto;
   margin-left: 0.5rem;
   display: inline-flex;
@@ -125,7 +125,7 @@ export default {
 }
 .charts,
 .list {
-  width: 93rem;
+  width: 81rem;
   height: auto;
   margin-top: 0.5rem;
   background-color: #fff;

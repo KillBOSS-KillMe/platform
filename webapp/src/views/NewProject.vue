@@ -90,22 +90,22 @@ export default {
       console.log("submit!");
       console.log(this.ruleForm);
       let subData = this.ruleForm
-      console.log(this.$axios)
+      console.log(this.axios)
       this.axios.post(
           "https://api.weixin.qq.com/cgi-bin/component/fastregisterweapp?action=search&component_access_token=TOKEN",
-          // {
-          //   // 前面声明了post请求，不需要在进行设置
-          //   // name: this.username, // 默认使用data，如果是axios.get，需要使用parmas:{}将数据包裹
-          //   name: subData.name,   // 企业名
-          //   code: subData.code,         // 企业代码
-          //   code_type: subData.codetype, // 企业代码类型（1：统一社会信用代码， 2：组织机构代码，3：营业执照注册号）
-          //   legal_persona_wechat: subData.wechatcode,   // 法人微信
-          //   legal_persona_name:subData.person ,   // 法人姓名
-          //   component_phone:subData.phone //第三方联系电话  
-          // },
-          // {
-          //   headers: { "Content-Type": "application/json" } // 这里可以设置请求头类型
-          // }
+          {
+            // 前面声明了post请求，不需要在进行设置
+            // name: this.username, // 默认使用data，如果是axios.get，需要使用parmas:{}将数据包裹
+            name: subData.name,   // 企业名
+            code: subData.code,         // 企业代码
+            code_type: subData.codetype, // 企业代码类型（1：统一社会信用代码， 2：组织机构代码，3：营业执照注册号）
+            legal_persona_wechat: subData.wechatcode,   // 法人微信
+            legal_persona_name:subData.person ,   // 法人姓名
+            component_phone:subData.phone //第三方联系电话  
+          },
+          {
+            headers: { "Content-Type": "application/json" } // 这里可以设置请求头类型
+          }
         ).then(res => {
           console.log(res); //请求成功打印res
         }).catch(err => {
