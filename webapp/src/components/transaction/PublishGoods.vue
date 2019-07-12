@@ -277,7 +277,7 @@ export default {
     }
   }
   .conter {
-    width: 91rem;
+    width: 79rem;
     height: auto;
     padding: 1rem;
     text-align: left;

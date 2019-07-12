@@ -160,7 +160,7 @@ export default {
     }
   }
   .conter {
-    width: 91rem;
+    width: 79rem;
     padding: 1rem;
     display: flex;
     justify-content: space-between;

@@ -304,7 +304,7 @@ export default {
 .branding,
 .mall,
 .public {
-  width: 91rem;
+  width: 79rem;
   height: auto;
   .conter {
     display: flex;
