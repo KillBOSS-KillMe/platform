@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>交易</title>
+  <!-- element-ui---引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- css初始化 -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- icon导入 -->
+  <link rel="stylesheet" href="css/icon.css">
+  <!-- 本页样式 -->
+  <link rel="stylesheet" href="css/transaction.css">
+</head>
+
+<body>
+  <header id="header">
+    <a href="#">
+      <img src="img/logo.png" />
+      贝肯为微信平台
+    </a>
+    <div class="nav">
+      <a href="#">小程序</a>
+      <a href="#">公众号</a>
+      <a href="#">会员</a>
+      <a href="/marketing">营销</a>
+      <a href="/transaction">交易</a>
+      <a href="#">设置</a>
+    </div>
+    <div class="operating">
+      <div>用户名</div>
+      <div>注销登录</div>
+    </div>
+  </header>
+  <div class="transaction">
+    <div class="nav">
+      <el-row class="tac">
+        <el-col>
+          <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
+            <router-link to="/dataRader">
+              <el-menu-item index="1">
+                <i class="el-icon-menu"></i>
+                <span slot="title">数据雷达</span>
+              </el-menu-item>
+            </router-link>
+            <el-submenu index="2">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>交易管理</span>
+              </template>
+              <el-menu-item-group>
+                <router-link to="/tarManagement">
+                  <el-menu-item index="2-1">交易概况</el-menu-item>
+                </router-link>
+                <router-link to="/inOrOutDetail">
+                  <el-menu-item index="2-2">收支明细</el-menu-item>
+                </router-link>
+              </el-menu-item-group>
+            </el-submenu>
+            <el-submenu index="3">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>订单管理</span>
+              </template>
+              <el-menu-item-group>
+                <router-link to="/allOrders">
+                  <el-menu-item index="3-1">所有订单</el-menu-item>
+                </router-link>
+                <el-menu-item index="3-2">代发货订单</el-menu-item>
+                <el-menu-item index="3-3">上门自提订单</el-menu-item>
+                <el-menu-item index="3-4">维权订单</el-menu-item>
+                <el-menu-item index="3-5">评价管理</el-menu-item>
+                <el-menu-item index="3-6">批量发货</el-menu-item>
+                <el-menu-item index="3-7">批量退款</el-menu-item>
+                <el-menu-item index="3-8">订单设置</el-menu-item>
+                <el-menu-item index="3-9">核销记录</el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
+            <el-submenu index="4">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>商品</span>
+              </template>
+              <el-menu-item-group>
+                <router-link to="/productList">
+                  <el-menu-item index="4-1">出售中的商品</el-menu-item>
+                </router-link>
+                <router-link to="/publishGoods">
+                  <el-menu-item index="5-1">发布商品</el-menu-item>
+                </router-link>
+              </el-menu-item-group>
+            </el-submenu>
+            <el-menu-item index="6">
+              <i class="el-icon-menu"></i>
+              <span slot="title">服务管理</span>
+            </el-menu-item>
+            <el-menu-item index="7">
+              <i class="el-icon-menu"></i>
+              <span slot="title">配送管理</span>
+            </el-menu-item>
+            <!-- <el-menu-item index="2">
+                <i class="el-icon-menu"></i>
+                <span slot="title">导航二</span>
+              </el-menu-item>
+              <el-menu-item index="3" disabled>
+                <i class="el-icon-document"></i>
+                <span slot="title">导航三</span>
+              </el-menu-item>
+              <el-menu-item index="4">
+                <i class="el-icon-setting"></i>
+                <span slot="title">导航四</span>
+              </el-menu-item> -->
+          </el-menu>
+        </el-col>
+      </el-row>
+    </div>
+    <div class="con">
+      <div class="charts">
+        <h3 class="title">小程序数据汇总</h3>
+        <div class="conter">
+          <div class="selType">
+            <div class="item">
+              <label>类型:</label>
+              <div>浏览数</div>
+              <div>浏览数</div>
+              <div>浏览数</div>
+            </div>
+            <div class="item">
+              <label>时间:</label>
+              <div>浏览数</div>
+              <div>浏览数</div>
+              <div class="active">浏览数</div>
+            </div>
+          </div>
+          <div class="listChart">
+            <el-table class="tableMin" :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+              <el-table-column prop="time" label width="180"></el-table-column>
+              <el-table-column prop="date" label="浏览数" width="180"></el-table-column>
+              <el-table-column prop="name" label="转发数" width="180"></el-table-column>
+              <el-table-column prop="address" label="新用户数"></el-table-column>
+            </el-table>
+            <div class="char">用户活跃度图表</div>
+          </div>
+          <div class="timeChart">最贱三十天曲线图图表</div>
+        </div>
+      </div>
+      <div class="charts">
+        <h3 class="title">交易情况</h3>
+        <div class="conter">
+          <div class="selType">
+            <div class="item">
+              <label>类型:</label>
+              <div>浏览数</div>
+              <div>浏览数</div>
+              <div>浏览数</div>
+            </div>
+            <div class="item">
+              <label>时间:</label>
+              <div>浏览数</div>
+              <div>浏览数</div>
+              <div class="active">浏览数</div>
+            </div>
+          </div>
+          <div class="listChart">
+            <el-table class="tableMin" :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+              <el-table-column prop="time" label width="180"></el-table-column>
+              <el-table-column prop="date" label="浏览数" width="180"></el-table-column>
+              <el-table-column prop="name" label="转发数" width="180"></el-table-column>
+              <el-table-column prop="address" label="新用户数"></el-table-column>
+            </el-table>
+            <div class="char">用户活跃度图表</div>
+          </div>
+          <div class="timeChart">最贱三十天曲线图图表</div>
+        </div>
+      </div>
+      <div class="charts">
+        <h3 class="title">
+          商品排行榜
+          <span>查看更多</span>
+        </h3>
+        <div class="conter">
+          <div class="selType">
+            <div class="item">
+              <div>浏览数</div>
+              <div>浏览数</div>
+              <div class="active">浏览数</div>
+            </div>
+          </div>
+          <el-table class="tableMax" :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+            <el-table-column prop="time" label width="180"></el-table-column>
+            <el-table-column prop="date" label="浏览数" width="180"></el-table-column>
+            <el-table-column prop="name" label="转发数" width="180"></el-table-column>
+            <el-table-column prop="address" label="新用户数"></el-table-column>
+          </el-table>
+        </div>
+      </div>
+      <div class="charts">
+        <h3 class="title">推客统计</h3>
+        <div class="conter">
+          <div class="selType">
+            <div class="item">
+              <label>类型:</label>
+              <div>浏览数</div>
+              <div>浏览数</div>
+              <div>浏览数</div>
+            </div>
+            <div class="item">
+              <label>时间:</label>
+              <div>浏览数</div>
+              <div>浏览数</div>
+              <div class="active">浏览数</div>
+            </div>
+          </div>
+          <div class="listChart">
+            <el-table class="tableMin" :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+              <el-table-column prop="time" label width="180"></el-table-column>
+              <el-table-column prop="date" label="浏览数" width="180"></el-table-column>
+              <el-table-column prop="name" label="转发数" width="180"></el-table-column>
+              <el-table-column prop="address" label="新用户数"></el-table-column>
+            </el-table>
+            <div class="char">用户活跃度图表</div>
+          </div>
+          <div class="timeChart">最贱三十天曲线图图表</div>
+        </div>
+      </div>
+      <div class="charts">
+        <h3 class="title">
+          推客价值排行版
+          <span>查看更多</span>
+        </h3>
+        <div class="conter">
+          <div class="selType">
+            <div class="item">
+              <div>浏览数</div>
+              <div>浏览数</div>
+              <div class="active">浏览数</div>
+            </div>
+          </div>
+          <el-table class="tableMax" :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+            <el-table-column prop="time" label width="180"></el-table-column>
+            <el-table-column prop="date" label="浏览数" width="180"></el-table-column>
+            <el-table-column prop="name" label="转发数" width="180"></el-table-column>
+            <el-table-column prop="address" label="新用户数"></el-table-column>
+          </el-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- element-ui---引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+</html>

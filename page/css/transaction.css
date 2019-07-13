@@ -1,0 +1,138 @@
+.transaction {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.nav {
+  width: 10rem;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  
+}
+li{
+  text-align: left;
+}
+.con {
+  width: 81rem;
+  height: auto;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.charts, .list {
+  width: 81rem;
+  height: auto;
+  margin-top: 0.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.title {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #343434;
+  border-bottom: 1px solid #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.title span {
+  font-size: 0.65rem;
+  color: #3889fc;
+  margin-left: 1rem;
+}
+.conter {
+  width: 79rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.selType {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.selType .item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 1rem;
+}
+.selType .item label {
+  font-size: 0.75rem;
+  color: #5a5a5a;
+  font-weight: 600;
+}
+.selType .item div {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #c4c4c4;
+  color: #c4c4c4;
+  border-radius: 0.25rem;
+  margin: 0 0.5rem;
+}
+.selType .item .active,
+.selType .item div:hover {
+  background-color: #3889fc;
+  border-color: #3889fc;
+  color: #fff;
+}
+.listChart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.listChart .char {
+  width: 21rem;
+  height: 16rem;
+  border: 1px solid #333;
+  margin-top: 0.5rem;
+}
+.timeChart {
+  width: 100%;
+  height: 14rem;
+  margin-top: 1rem;
+  border: 1px solid #333;
+}
+.tableMax, .tableMin {
+  border: 1px solid #f0f0f0;
+  color: #afafaf;
+  font-size: 0.75rem;
+  height: 16rem;
+}
+.tableMax td, .tableMax tr, .tableMax th,
+.tableMin td, .tableMin tr, .tableMin th {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 1.75rem;
+}
+.tableMax tr:nth-child(n),
+.tableMin tr:nth-child(n) {
+  background-color: #f9f9f9;
+}
+.tableMax  tr:nth-child(2n),
+.tableMin  tr:nth-child(2n) {
+  background-color: #ffffff;
+}
+.tableMin {
+  width: 60.4rem;
+  height: 16rem;
+  margin-top: 0.5rem;
+}
+.tableMax {
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+}
+.charts .el-table .warning-row,
+.list .el-table .warning-row {
+  background: oldlace;
+}
+.charts .el-table .success-row,
+.list .el-table .success-row {
+  background: #f0f9eb;
+}
