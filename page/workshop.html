@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>小程序工厂</title>
+</head>
+
+<body>
+  <div class="about">
+    <div class="position">
+      小程序管理
+      <span>/ 小程序名称 /</span>
+      装修
+    </div>
+    <div class="title">
+      <i class="iconfont icon-shouye"></i>
+      装修
+      <span>更换模板</span>
+      <span>装修过程中不想影响线上客户使用要怎么做呢？</span>
+    </div>
+    <div class="factory">
+      <div class="tool">
+        <ul class="nav-tabs">
+          <li role="presentation" class="active">页面管理</li>
+          <li role="presentation">组件库</li>
+        </ul>
+        <div class="pageList" style="display: none">
+          <div class="newPage">
+            <i class="iconfont icon-shouye"></i>
+            新建页面
+          </div>
+          <ul class="pageLi">
+            <li>
+              页面名称
+              <span>
+                <i class="iconfont icon-shouye"></i>
+                <i class="iconfont icon-shouye"></i>
+              </span>
+            </li>
+            <li>
+              页面名称
+              <span>
+                <i class="iconfont icon-shouye"></i>
+                <i class="iconfont icon-shouye"></i>
+              </span>
+            </li>
+            <li>
+              页面名称
+              <span>
+                <i class="iconfont icon-shouye"></i>
+                <i class="iconfont icon-shouye"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="moduleList">
+          <div class="item">
+            <div class="typeNmae">--标题--</div>
+            <ul>
+              <li draggable="true" id="search1" @dragstart="copyDrop($event)">
+                <i class="iconfont icon-fenxiang2"></i>
+                搜索1
+              </li>
+              <li draggable="true" id="search2" @dragstart="copyDrop($event)">
+                <i class="iconfont icon-fenxiang2"></i>
+                搜索2
+              </li>
+              <li draggable="true" id="placard1" @dragstart="copyDrop($event)">
+                <i class="iconfont icon-fenxiang2"></i>
+                公告
+              </li>
+              <li draggable="true" id="nav1" @dragstart="copyDrop($event)">
+                <i class="iconfont icon-fenxiang2"></i>
+                导航1
+              </li>
+              <li draggable="true" id="nav2" @dragstart="copyDrop($event)">
+                <i class="iconfont icon-fenxiang2"></i>
+                导航2
+              </li>
+              <li draggable="true" id="nav3" @dragstart="copyDrop($event)">
+                <i class="iconfont icon-fenxiang2"></i>
+                导航3
+              </li>
+              <li draggable="true" id="nav4" @dragstart="copyDrop($event)">
+                <i class="iconfont icon-fenxiang2"></i>
+                导航4
+              </li>
+              <li draggable="true" id="commodityList1" @dragstart="copyDrop($event)">
+                <i class="iconfont icon-fenxiang2"></i>
+                商品1
+              </li>
+              <li draggable="true" id="commodityList2" @dragstart="copyDrop($event)">
+                <i class="iconfont icon-fenxiang2"></i>
+                商品2
+              </li>
+              <li draggable="true" id="commodityList3" @dragstart="copyDrop($event)">
+                <i class="iconfont icon-fenxiang2"></i>
+                商品3
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="effect">
+        <div class="mobileSta">
+          <span>9:50</span>
+          <div>
+            <i class="iconfont icon-shouye"></i>
+            <i class="iconfont icon-shouye"></i>
+            <i class="iconfont icon-shouye"></i>
+          </div>
+        </div>
+        <div class="pageInfo">
+          <i class="iconfont icon-shouye"></i>
+          <span>页面名称</span>
+          <i class="iconfont icon-shouye"></i>
+        </div>
+        <div id="pageModel" class="pageShow" @drop="getDrop($event)" @dragover="allowDrop($event)">
+
+        </div>
+      </div>
+      <div class="delDom" @drop="removedrap($event)" @dragover="allowDrop($event)">1</div>
+      <div class="adjustment">1</div>
+    </div>
+
+    <div class="domList">
+      <div draggable="true" data-type="search1" id="search1_dom" @dragstart="copyDrop($event)">
+        <icon class="iconfont icon-fenxiang2"></icon>
+        <input type='text' placeholder='请输入搜索内容' />
+      </div>
+      <div draggable="true" data-type="search2" id="search2_dom" @dragstart="copyDrop($event)">
+        <icon class="iconfont icon-fenxiang2"></icon>
+        <input type='text' placeholder='请输入搜索内容' />
+      </div>
+      <div draggable="true" data-type="placard1" id="placard1_dom" @dragstart="copyDrop($event)">
+        <div class='title'>
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>公告：</div>
+        </div>
+        <div class='con'>公告公告公告公告公告公告公告公告公告公告公告公告！</div>
+      </div>
+      <div draggable="true" data-type="nav1" id="nav1_dom" @dragstart="copyDrop($event)">
+        <!-- <block wx:for="{{data}}" key="index" index="index" item="item">
+          <div class="item">
+            <icon class="iconfont icon-tuihuobaozhang"></icon>
+            <div>导航</div>
+          </div>
+          <div class="item">
+            <icon class="iconfont icon-tuihuobaozhang"></icon>
+            <div>导航</div>
+          </div>
+        </block> -->
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+      </div>
+      <div draggable="true" data-type="nav2" id="nav2_dom" @dragstart="copyDrop($event)">
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+      </div>
+      <div draggable="true" data-type="nav3" id="nav3_dom" @dragstart="copyDrop($event)">
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+        <div class="item">
+          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <div>导航</div>
+        </div>
+      </div>
+      <div draggable="true" data-type="nav4" id="nav4_dom" @dragstart="copyDrop($event)">
+        <div class="item">导航</div>
+        <div class="item">导航</div>
+        <div class="item">导航</div>
+        <div class="item">导航</div>
+        <div class="item">导航</div>
+        <div class="item">导航</div>
+        <div class="item">导航</div>
+      </div>
+      <div draggable="true" data-type="commodityList1" id="commodityList1_dom" @dragstart="copyDrop($event)">
+        <div class="item">
+          <img src="./../assets/logo.png">
+          <div class='info'>
+            <div class="name">名字名字</div>
+            <div class="infoCon">
+              <div class="infotext">
+                <div class='price'>99999999</div>
+                <div class='priceUnit'>元</div>
+                <div class='salesVolume'>销售量:1000件</div>
+              </div>
+              <icon class="iconfont icon-tuihuobaozhang"></icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div draggable="true" data-type="commodityList2" id="commodityList2_dom" @dragstart="copyDrop($event)">
+        <div class="item">
+          <img src="./../assets/logo.png">
+          <div class='info'>
+            <div class="name">名字名字名字名字</div>
+            <div class="infoCon">
+              <div>
+                <div class='price'>
+                  99999999
+                  <span class='priceUnit'>元</span>
+                </div>
+                <div class='salesVolume'>销售量:1000件</div>
+              </div>
+              <icon class="iconfont icon-tuihuobaozhang"></icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div draggable="true" data-type="commodityList3" id="commodityList3_dom" @dragstart="copyDrop($event)">
+        <div class="item">
+          <img src="./../assets/logo.png">
+          <div class='info'>
+            <div class="name">名字名字名字名字</div>
+            <div class="infoCon">
+              <div>
+                <div class='price'>
+                  99999999
+                  <span class='priceUnit'>元</span>
+                </div>
+                <div class='salesVolume'>销售量:1000件</div>
+              </div>
+              <icon class="iconfont icon-tuihuobaozhang"></icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

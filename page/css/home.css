@@ -437,6 +437,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .message .QRCodeimg{
   width: 7.5rem;
   height: 7.5rem;

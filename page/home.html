@@ -19,6 +19,24 @@
 </head>
 
 <body>
+  <header id="header">
+    <a href="#">
+        <img src="img/logo.png" />
+      贝肯为微信平台
+    </a>
+    <div class="nav">
+      <a href="#">小程序</a>
+      <a href="#">公众号</a>
+      <a href="#">会员</a>
+      <a href="/marketing">营销</a>
+      <a href="/transaction">交易</a>
+      <a href="#">设置</a>
+    </div>
+    <div class="operating">
+      <div>用户名</div>
+      <div>注销登录</div>
+    </div>
+  </header>
   <div class="home">
     <div class="features">
       <div class="companyInfo">
@@ -57,18 +75,18 @@
         </div>
         <div class="button">
           <!-- newProject -->
-          <!-- <router-link to="/newProject"> -->
+          <!-- <a to="/newProject"> -->
           <!-- <el-button type="text" @click="open">点击打开 Message Box</el-button> -->
-          <!-- </router-link> -->
-          <router-link to="/newProject">
+          <!-- </a> -->
+          <a to="/newProject">
             <button>创建小程序</button>
-          </router-link>
-          <router-link to="/newProject">
+          </a>
+          <a to="/newProject">
             <button>创建小程序</button>
-          </router-link>
-          <router-link to="/newProject">
+          </a>
+          <a to="/newProject">
             <button>创建小程序</button>
-          </router-link>
+          </a>
         </div>
         <div class="list">
           <div class="item">
@@ -98,10 +116,10 @@
             </div>
             <div class="operating">
               <div>
-                <router-link to="/workshop">
+                <a to="/workshop">
                   <icon class="iconfont icon-31aichegujia"></icon>
                   装修
-                </router-link>
+                </a>
               </div>
               <div>
                 <icon class="iconfont icon-31aichegujia"></icon>
@@ -386,8 +404,8 @@
         </div>
       </div>
       <div class="QRCode">
-        <img src="img/logo.png">
-        <img src="img/logo.png">
+        <img class="QRCodeimg" src="img/logo.png">
+        <img class="QRCodeimg" src="img/logo.png">
       </div>
     </div>
   </div>
