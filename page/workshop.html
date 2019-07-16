@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>小程序工厂</title>
+  <script src="js/jquery.min.3.4.1.js"></script>
   <!-- import Vue before Element -->
   <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -90,7 +91,7 @@
         <div class="moduleList">
           <div class="item">
             <div class="typeNmae">--标题--</div>
-            <ul>
+            <ul class="dragstartDom">
               <li draggable="true" id="search1" @dragstart="copyDrop($event)">
                 <i class="iconfont icon-fenxiang2"></i>
                 搜索1
@@ -149,31 +150,32 @@
           <span>页面名称</span>
           <i class="iconfont icon-shouye"></i>
         </div>
-        <div id="pageModel" class="pageShow" @drop="getDrop($event)" @dragover="allowDrop($event)">
-
-        </div>
+        <div id="pageModel" class="pageShow"></div>
       </div>
-      <div class="delDom" @drop="removedrap($event)" @dragover="allowDrop($event)">1</div>
       <div class="adjustment">1</div>
     </div>
 
     <div class="domList">
-      <div draggable="true" data-type="search1" id="search1_dom" @dragstart="copyDrop($event)">
+      <div draggable="true" data-type="search1" id="search1_dom" class="copyDropDom">
+        <icon class="delDomClick iconfont icon-31shanchu"></icon>
         <icon class="iconfont icon-fenxiang2"></icon>
         <input type='text' placeholder='请输入搜索内容' />
       </div>
-      <div draggable="true" data-type="search2" id="search2_dom" @dragstart="copyDrop($event)">
+      <div draggable="true" data-type="search2" id="search2_dom" class="copyDropDom">
+        <icon class="delDomClick iconfont icon-31shanchu"></icon>
         <icon class="iconfont icon-fenxiang2"></icon>
         <input type='text' placeholder='请输入搜索内容' />
       </div>
-      <div draggable="true" data-type="placard1" id="placard1_dom" @dragstart="copyDrop($event)">
+      <div draggable="true" data-type="placard1" id="placard1_dom" class="copyDropDom">
+        <icon class="delDomClick iconfont icon-31shanchu"></icon>
         <div class='title'>
           <icon class="iconfont icon-tuihuobaozhang"></icon>
           <div>公告：</div>
         </div>
         <div class='con'>公告公告公告公告公告公告公告公告公告公告公告公告！</div>
       </div>
-      <div draggable="true" data-type="nav1" id="nav1_dom" @dragstart="copyDrop($event)">
+      <div draggable="true" data-type="nav1" id="nav1_dom" class="copyDropDom">
+        <icon class="delDomClick iconfont icon-31shanchu"></icon>
         <!-- <block wx:for="{{data}}" key="index" index="index" item="item">
           <div class="item">
             <icon class="iconfont icon-tuihuobaozhang"></icon>
@@ -205,7 +207,8 @@
           <div>导航</div>
         </div>
       </div>
-      <div draggable="true" data-type="nav2" id="nav2_dom" @dragstart="copyDrop($event)">
+      <div draggable="true" data-type="nav2" id="nav2_dom" class="copyDropDom">
+        <icon class="delDomClick iconfont icon-31shanchu"></icon>
         <div class="item">
           <icon class="iconfont icon-tuihuobaozhang"></icon>
           <div>导航</div>
@@ -227,7 +230,8 @@
           <div>导航</div>
         </div>
       </div>
-      <div draggable="true" data-type="nav3" id="nav3_dom" @dragstart="copyDrop($event)">
+      <div draggable="true" data-type="nav3" id="nav3_dom" class="copyDropDom">
+        <icon class="delDomClick iconfont icon-31shanchu"></icon>
         <div class="item">
           <icon class="iconfont icon-tuihuobaozhang"></icon>
           <div>导航</div>
@@ -249,7 +253,8 @@
           <div>导航</div>
         </div>
       </div>
-      <div draggable="true" data-type="nav4" id="nav4_dom" @dragstart="copyDrop($event)">
+      <div draggable="true" data-type="nav4" id="nav4_dom" class="copyDropDom">
+        <icon class="delDomClick iconfont icon-31shanchu"></icon>
         <div class="item">导航</div>
         <div class="item">导航</div>
         <div class="item">导航</div>
@@ -258,7 +263,8 @@
         <div class="item">导航</div>
         <div class="item">导航</div>
       </div>
-      <div draggable="true" data-type="commodityList1" id="commodityList1_dom" @dragstart="copyDrop($event)">
+      <div draggable="true" data-type="commodityList1" id="commodityList1_dom" class="copyDropDom">
+        <icon class="delDomClick iconfont icon-31shanchu"></icon>
         <div class="item">
           <img src="./../assets/logo.png">
           <div class='info'>
@@ -274,7 +280,8 @@
           </div>
         </div>
       </div>
-      <div draggable="true" data-type="commodityList2" id="commodityList2_dom" @dragstart="copyDrop($event)">
+      <div draggable="true" data-type="commodityList2" id="commodityList2_dom" class="copyDropDom">
+        <icon class="delDomClick iconfont icon-31shanchu"></icon>
         <div class="item">
           <img src="./../assets/logo.png">
           <div class='info'>
@@ -292,7 +299,8 @@
           </div>
         </div>
       </div>
-      <div draggable="true" data-type="commodityList3" id="commodityList3_dom" @dragstart="copyDrop($event)">
+      <div draggable="true" data-type="commodityList3" id="commodityList3_dom" class="copyDropDom">
+        <icon class="delDomClick iconfont icon-31shanchu"></icon>
         <div class="item">
           <img src="./../assets/logo.png">
           <div class='info'>
@@ -313,5 +321,59 @@
     </div>
   </div>
 </body>
-
+<script>
+  $(function(){
+    //开始拖动
+    $(".dragstartDom li, #pageModel .copyDropDom").on("dragstart",function(e){
+      console.log("SET -> addBuffer",e.target.id);
+      e.originalEvent.dataTransfer.setData("addBuffer",e.target.id);  
+      e.originalEvent.dataTransfer.effectAllowed = 'all'; 
+      e.originalEvent.dataTransfer.dropEffect = 'all'; 
+      e.originalEvent.dataTransfer.setDragImage(this,0,0); 
+    }); 
+    $("#pageModel").on("dragover",function(e){  
+      e.originalEvent.preventDefault();  
+    }) 
+    $("#removeBox").on("dragover",function(e){
+        e.originalEvent.preventDefault();  
+    }) 
+    //放下事件  
+    $("#pageModel").on("drop",function(e){
+      e.originalEvent.preventDefault();
+      var id = e.originalEvent.dataTransfer.getData("addBuffer"); 
+      if (id === null || id === "") {
+        console.log("id is NULL！");
+        return;
+      }
+      var itemName = id + parseInt(Math.random() * (1000000 - 1 + 1) + 1);
+      // 克隆真实对象
+      var cloneObject = document.getElementById(id + "_dom").cloneNode(true);
+      // 为克隆对象设置唯一Id
+      cloneObject.setAttribute("id", itemName);
+      // 事件追加绑定
+      cloneObject.addEventListener("dragstart", this.copyDrop2);
+      // 把新的节点添加到新的区域中
+      // e.target.appendChild(cloneObject);
+      $("#pageModel").append(cloneObject);
+      // 获取手机模型中的子元素
+      findChildren();
+    })  
+    $(document).on("click", ".delDomClick",function(e){
+      $(this).parent().remove()
+      // 获取手机模型中的子元素
+      findChildren();
+    });
+  })
+  const findChildren = function() {
+    var domList = $("#pageModel").children();
+    var i = 0;
+    var domListNode = [];
+    for (let i = 0; i < domList.length; i++) {
+      let typeData = $("#" + domList[i].id).attr("data-type");
+      let domNode = { type: typeData, data: {} };
+      domListNode.push(domNode);
+    }
+    console.log(domListNode)
+  }
+</script>
 </html>
