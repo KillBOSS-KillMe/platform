@@ -10,6 +10,7 @@
   background-color: #fff;
   border-radius: 5px;
 }
+
 [data-type='commodityList1'] .item img{
   width: 345px;
   height: 185px;
@@ -440,6 +441,13 @@
   animation: 10s wordsLoop linear infinite normal;
 }
 
+.listName{
+  width: 345px;
+  margin: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 @keyframes wordsLoop {
   0% {
     transform: translateX(200px);
@@ -681,7 +689,7 @@
   overflow-y: auto;
   margin: 0 auto;
   border: 1px solid #333;
-  background-color: #000;
+  background-color: #ccc;
 }
 .effect .pageShow::-webkit-scrollbar {
     display: none;
