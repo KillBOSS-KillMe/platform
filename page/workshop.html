@@ -136,6 +136,7 @@
           </div>
         </div>
       </div>
+      <!-- 手机模型 -->
       <div class="effect">
         <div class="mobileSta">
           <span>9:50</span>
@@ -150,9 +151,17 @@
           <span>页面名称</span>
           <i class="iconfont icon-shouye"></i>
         </div>
+        <!-- 显示器模拟器 -->
         <div id="pageModel" class="pageShow"></div>
       </div>
-      <div class="adjustment">1</div>
+      <!-- 组件数据设置区域 -->
+      <div class="adjustment">
+        <div id="search1_Setting">
+          <!-- 公告内容设置 -->
+          <div class="title">公告内容设置</div>
+          标题设置，内容设置，
+        </div>
+      </div>
     </div>
 
     <div class="domList">
@@ -326,6 +335,19 @@
 </body>
 <script>
   $(function(){
+    $(document).on("click", ".copyDropDom",function(e){
+      let typeName = $(this).attr("data-type");
+      alert(typeName);
+      // 根据点击的组件，在右侧框中显示组件的设置项目
+      switch(typeName) {
+        case 'search1': 
+          $('#search1_Setting').show()
+          break;
+        case 'search1': 
+          $('#search1_Setting').show()
+          break;
+      }
+    });
     //开始拖动
     $(".dragstartDom li, #pageModel .copyDropDom").on("dragstart",function(e){
       console.log("SET -> addBuffer",e.target.id);
@@ -378,5 +400,6 @@
     }
     console.log(domListNode)
   }
+  
 </script>
 </html>
