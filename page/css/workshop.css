@@ -717,24 +717,30 @@
 }
 .copyDropDom{
   position: relative;
+  
 }
 .copyDropDom .delDomClick{
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
+}
+.copyDropDom .delDomClick .iconfont{
   width: 20px;
   height: 20px;;
   color: red;
   border: 1px solid red;
   font-size: 15px;
-  padding: 10px;
+  margin: 0 5px;
   background-color: #cdcdcd;
-  display: none;
+  border-radius: 0;
   text-align: center;
   line-height: 20px;
 }
 .copyDropDom:hover .delDomClick{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* .copyDropDom, .item{
   cursor: pointer;
