@@ -39,10 +39,9 @@ const findChildren = function () {
 
 
 $(function () {
-   console.log('-----------------')
   //开始拖动
   $(".dragstartDom li, #pageModel .copyDropDom").on("dragstart", function (e) {
-    console.log(e)
+
     console.log("SET -> addBuffer", e.target.id);
     e.originalEvent.dataTransfer.setData("addBuffer", e.target.id);
     e.originalEvent.dataTransfer.effectAllowed = 'all';
@@ -58,6 +57,7 @@ $(function () {
   //放下事件  
   $("#pageModel").on("drop", function (e) {
     e.originalEvent.preventDefault();
+    console.log(e.originalEvent)
     var id = e.originalEvent.dataTransfer.getData("addBuffer");
     if (id === null || id === "") {
       console.log("id is NULL！");
