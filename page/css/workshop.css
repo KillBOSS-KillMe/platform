@@ -599,7 +599,7 @@
   margin: 1rem auto;
 }
 .tool .pageLi li {
-  width: 14rem;
+  /* width: 14rem; */
   height: 1.9rem;
   border: solid #9f9f9f;
   border-width: 0px;

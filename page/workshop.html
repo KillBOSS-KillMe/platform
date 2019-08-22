@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>小程序工厂</title>
   <script src="js/jquery.min.3.4.1.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script> -->
   <!-- import Vue before Element -->
   <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
@@ -60,34 +60,49 @@
       <div class="tool">
         <ul class="nav-tabs">
           <li @click="commodityPageSel" data-type="page" :class="{'active':selcommodityPage == 'page'}">页面管理</li>
-          <li @click="commodityPageSel" data-type="commodity" :class="{'active':selcommodityPage == 'commodity'}">组件库</li>
+          <li @click="commodityPageSel" data-type="commodity" :class="{'active':selcommodityPage == 'commodity'}">组件库
+          </li>
         </ul>
         <div class="pageList" v-if="selcommodityPage === 'page'">
-          <div class="newPage">
-            <i class="iconfont icon-shouye"></i>
+          <!-- <div class="newPage">
+            <i class="iconfont icon-fenxiang2"></i>
             新建页面
-          </div>
+          </div> -->
           <ul class="pageLi">
             <li>
-              页面名称
               <span>
-                <i class="iconfont icon-shouye"></i>
-                <i class="iconfont icon-shouye"></i>
+                <i class="iconfont icon-fenxiang2"></i>
+                页面名称
               </span>
+              <i class="iconfont icon-fenxiang2"></i>
             </li>
             <li>
-              页面名称
               <span>
-                <i class="iconfont icon-shouye"></i>
-                <i class="iconfont icon-shouye"></i>
+                <i class="iconfont icon-fenxiang2"></i>
+                页面名称
               </span>
+              <i class="iconfont icon-fenxiang2"></i>
             </li>
             <li>
-              页面名称
               <span>
-                <i class="iconfont icon-shouye"></i>
-                <i class="iconfont icon-shouye"></i>
+                <i class="iconfont icon-fenxiang2"></i>
+                页面名称
               </span>
+              <i class="iconfont icon-fenxiang2"></i>
+            </li>
+            <li>
+              <span>
+                <i class="iconfont icon-fenxiang2"></i>
+                页面名称
+              </span>
+              <i class="iconfont icon-fenxiang2"></i>
+            </li>
+            <li>
+              <span>
+                <i class="iconfont icon-fenxiang2"></i>
+                页面名称
+              </span>
+              <i class="iconfont icon-fenxiang2"></i>
             </li>
           </ul>
         </div>
@@ -482,29 +497,29 @@
     </div>
     <!-- 弹框区域 -->
     <div>
-        <div class="bulletBoxBG">
-          <i class="bulletBoxClose iconfont icon-guanbi closeBox"></i>
-          <div class="colorSel">
-            <h5 class="modal-title">颜色选择</h5>
-            <div class="modal-body conList">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">保存</button>
-              <button type="button" class="btn btn-secondary closeBox" data-dismiss="modal">退出</button>
-            </div>
+      <div class="bulletBoxBG">
+        <i class="bulletBoxClose iconfont icon-guanbi closeBox"></i>
+        <div class="colorSel">
+          <h5 class="modal-title">颜色选择</h5>
+          <div class="modal-body conList">
           </div>
-    
-          <div class="iconSel">
-            <h5 class="modal-title">图标选择</h5>
-            <div class="modal-body conList">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">保存</button>
-              <button type="button" class="btn btn-secondary closeBox" data-dismiss="modal">退出</button>
-            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">保存</button>
+            <button type="button" class="btn btn-secondary closeBox" data-dismiss="modal">退出</button>
+          </div>
+        </div>
+
+        <div class="iconSel">
+          <h5 class="modal-title">图标选择</h5>
+          <div class="modal-body conList">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">保存</button>
+            <button type="button" class="btn btn-secondary closeBox" data-dismiss="modal">退出</button>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
@@ -520,6 +535,13 @@
   var app = new Vue({
     el: '#app',
     data: {
+      pageList: [
+        {'icon': 'fenxiang2', 'name': '首页', 'id': '1'},
+        {'icon': 'fenxiang2', 'name': '个人中心', 'id': '1'},
+        {'icon': 'fenxiang2', 'name': '购物车', 'id': '1'},
+        {'icon': 'fenxiang2', 'name': '商品详情', 'id': '1'},
+        {'icon': 'fenxiang2', 'name': '个人中心', 'id': '1'},
+      ],
       selcommodityPage: 'page'
     },
     // 初始化
@@ -528,16 +550,15 @@
       console.clear()
       console.log('初始化====>>>>a is: ' + this.selcommodityPage)
     },
-    
+
     methods: {
+      // 选择显示页面列表，或者标签列表
       commodityPageSel(e) {
-        // console.log(e)
-        console.log(e.srcElement.dataset)
         this.selcommodityPage = e.srcElement.dataset.type
-        console.log('初始化====>>>>a is: ' + this.selcommodityPage)
       }
     }
   })
+  
 </script>
 
 </html>
