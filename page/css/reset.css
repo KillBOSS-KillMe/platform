@@ -127,3 +127,25 @@ html{
 .dn{
   display: none;
 }
+/* 弹框背景浮层 */
+.bulletBoxBG{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.bulletBoxBG .bulletBoxClose{
+  position: absolute;
+  top: 70px;
+  right: 70px;
+  color: #fff;
+  font-size: 50px;
+}

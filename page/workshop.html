@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>小程序工厂</title>
   <script src="js/jquery.min.3.4.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <!-- import Vue before Element -->
   <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
@@ -43,7 +44,7 @@
       <div>注销登录</div>
     </div>
   </header>
-  <div class="about">
+  <div class="about" id="app">
     <div class="position">
       小程序管理
       <span>/ 小程序名称 /</span>
@@ -58,10 +59,10 @@
     <div class="factory">
       <div class="tool">
         <ul class="nav-tabs">
-          <li role="presentation" class="active">页面管理</li>
-          <li role="presentation">组件库</li>
+          <li @click="commodityPageSel" data-type="page" :class="{'active':selcommodityPage == 'page'}">页面管理</li>
+          <li @click="commodityPageSel" data-type="commodity" :class="{'active':selcommodityPage == 'commodity'}">组件库</li>
         </ul>
-        <div class="pageList" style="display: none">
+        <div class="pageList" v-if="selcommodityPage === 'page'">
           <div class="newPage">
             <i class="iconfont icon-shouye"></i>
             新建页面
@@ -90,48 +91,48 @@
             </li>
           </ul>
         </div>
-        <div class="moduleList">
+        <div class="moduleList" v-if="selcommodityPage === 'commodity'">
           <div class="item">
             <div class="typeNmae">--标题--</div>
             <ul class="dragstartDom">
-              <li draggable="true" id="search1" @dragstart="copyDrop($event)">
+              <li draggable="true" id="search1">
                 <i class="iconfont icon-fenxiang2"></i>
                 搜索1
               </li>
-              <li draggable="true" id="search2" @dragstart="copyDrop($event)">
+              <li draggable="true" id="search2">
                 <i class="iconfont icon-fenxiang2"></i>
                 搜索2
               </li>
-              <li draggable="true" id="placard1" @dragstart="copyDrop($event)">
-                <i class="iconfont icon-fenxiang2"></i>
+              <li draggable="true" id="placard1">
+                <i class="iconfont icon-laba"></i>
                 公告
               </li>
-              <li draggable="true" id="nav1" @dragstart="copyDrop($event)">
-                <i class="iconfont icon-fenxiang2"></i>
+              <li draggable="true" id="nav1">
+                <i class="iconfont icon-home"></i>
                 导航1
               </li>
-              <li draggable="true" id="nav2" @dragstart="copyDrop($event)">
-                <i class="iconfont icon-fenxiang2"></i>
+              <li draggable="true" id="nav2">
+                <i class="iconfont icon-home"></i>
                 导航2
               </li>
-              <li draggable="true" id="nav3" @dragstart="copyDrop($event)">
-                <i class="iconfont icon-fenxiang2"></i>
+              <li draggable="true" id="nav3">
+                <i class="iconfont icon-home"></i>
                 导航3
               </li>
-              <li draggable="true" id="nav4" @dragstart="copyDrop($event)">
-                <i class="iconfont icon-fenxiang2"></i>
+              <li draggable="true" id="nav4">
+                <i class="iconfont icon-home"></i>
                 导航4
               </li>
-              <li draggable="true" id="commodityList1" @dragstart="copyDrop($event)">
-                <i class="iconfont icon-fenxiang2"></i>
+              <li draggable="true" id="commodityList1">
+                <i class="iconfont icon-31quanbushangpin"></i>
                 商品1
               </li>
-              <li draggable="true" id="commodityList2" @dragstart="copyDrop($event)">
-                <i class="iconfont icon-fenxiang2"></i>
+              <li draggable="true" id="commodityList2">
+                <i class="iconfont icon-31quanbushangpin"></i>
                 商品2
               </li>
-              <li draggable="true" id="commodityList3" @dragstart="copyDrop($event)">
-                <i class="iconfont icon-fenxiang2"></i>
+              <li draggable="true" id="commodityList3">
+                <i class="iconfont icon-31quanbushangpin"></i>
                 商品3
               </li>
             </ul>
@@ -193,9 +194,9 @@
               <label class="form-check-label" for="exampleCheck1">使用预制图标</label>
             </div>
             <div class="form-group">
-              <button type="button" class="btn btn-success">图标选择</button>
-              <button type="button" class="btn btn-danger">图标颜色选择</button>
-              <icon class="iconfont icon-fenxiang2"></icon>
+              <button type="button" id="iconSel" class="btn btn-success">图标选择</button>
+              <button type="button" id="colorSel" class="btn btn-danger">图标颜色选择</button>
+              <i class="iconfont icon-fenxiang2"></i>
             </div>
           </div>
 
@@ -265,137 +266,137 @@
     <div class="domList">
       <div draggable="true" data-type="search1" id="search1_dom" class="copyDropDom">
         <div class="delDomClick">
-          <icon data-type="setting" class="iconfont icon-shuru"></icon>
-          <icon data-type="top" class="iconfont icon-sanjiao2"></icon>
-          <icon data-type="down" class="iconfont icon-sanjiao1"></icon>
-          <icon data-type="del" class="iconfont icon-31shanchu"></icon>
+          <i data-type="setting" class="iconfont icon-shuru"></i>
+          <i data-type="top" class="iconfont icon-sanjiao2"></i>
+          <i data-type="down" class="iconfont icon-sanjiao1"></i>
+          <i data-type="del" class="iconfont icon-31shanchu"></i>
         </div>
-        <icon class="iconfont icon-fenxiang2"></icon>
+        <i class="iconfont icon-fenxiang2"></i>
         <input type='text' placeholder='请输入搜索内容' />
       </div>
       <div draggable="true" data-type="search2" id="search2_dom" class="copyDropDom">
         <div class="delDomClick">
-          <icon data-type="setting" class="iconfont icon-shuru"></icon>
-          <icon data-type="top" class="iconfont icon-sanjiao2"></icon>
-          <icon data-type="down" class="iconfont icon-sanjiao1"></icon>
-          <icon data-type="del" class="iconfont icon-31shanchu"></icon>
+          <i data-type="setting" class="iconfont icon-shuru"></i>
+          <i data-type="top" class="iconfont icon-sanjiao2"></i>
+          <i data-type="down" class="iconfont icon-sanjiao1"></i>
+          <i data-type="del" class="iconfont icon-31shanchu"></i>
         </div>
-        <icon class="iconfont icon-fenxiang2"></icon>
+        <i class="iconfont icon-fenxiang2"></i>
         <input type='text' placeholder='请输入搜索内容' />
       </div>
       <div draggable="true" data-type="placard1" id="placard1_dom" class="copyDropDom">
         <div class="delDomClick">
-          <icon data-type="setting" class="iconfont icon-shuru"></icon>
-          <icon data-type="top" class="iconfont icon-sanjiao2"></icon>
-          <icon data-type="down" class="iconfont icon-sanjiao1"></icon>
-          <icon data-type="del" class="iconfont icon-31shanchu"></icon>
+          <i data-type="setting" class="iconfont icon-shuru"></i>
+          <i data-type="top" class="iconfont icon-sanjiao2"></i>
+          <i data-type="down" class="iconfont icon-sanjiao1"></i>
+          <i data-type="del" class="iconfont icon-31shanchu"></i>
         </div>
         <div class='title'>
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-laba"></i>
           <div>公告：</div>
         </div>
         <div class='con'>公告公告公告公告公告公告公告公告公告公告公告公告！</div>
       </div>
       <div draggable="true" data-type="nav1" id="nav1_dom" class="copyDropDom">
         <div class="delDomClick">
-          <icon data-type="setting" class="iconfont icon-shuru"></icon>
-          <icon data-type="top" class="iconfont icon-sanjiao2"></icon>
-          <icon data-type="down" class="iconfont icon-sanjiao1"></icon>
-          <icon data-type="del" class="iconfont icon-31shanchu"></icon>
+          <i data-type="setting" class="iconfont icon-shuru"></i>
+          <i data-type="top" class="iconfont icon-sanjiao2"></i>
+          <i data-type="down" class="iconfont icon-sanjiao1"></i>
+          <i data-type="del" class="iconfont icon-31shanchu"></i>
         </div>
         <!-- <block wx:for="{{data}}" key="index" index="index" item="item">
           <div class="item">
-            <icon class="iconfont icon-tuihuobaozhang"></icon>
+            <i class="iconfont icon-tuihuobaozhang"></i>
             <div>导航</div>
           </div>
           <div class="item">
-            <icon class="iconfont icon-tuihuobaozhang"></icon>
+            <i class="iconfont icon-tuihuobaozhang"></i>
             <div>导航</div>
           </div>
         </block> -->
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
       </div>
       <div draggable="true" data-type="nav2" id="nav2_dom" class="copyDropDom">
         <div class="delDomClick">
-          <icon data-type="setting" class="iconfont icon-shuru"></icon>
-          <icon data-type="top" class="iconfont icon-sanjiao2"></icon>
-          <icon data-type="down" class="iconfont icon-sanjiao1"></icon>
-          <icon data-type="del" class="iconfont icon-31shanchu"></icon>
+          <i data-type="setting" class="iconfont icon-shuru"></i>
+          <i data-type="top" class="iconfont icon-sanjiao2"></i>
+          <i data-type="down" class="iconfont icon-sanjiao1"></i>
+          <i data-type="del" class="iconfont icon-31shanchu"></i>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
       </div>
       <div draggable="true" data-type="nav3" id="nav3_dom" class="copyDropDom">
         <div class="delDomClick">
-          <icon data-type="setting" class="iconfont icon-shuru"></icon>
-          <icon data-type="top" class="iconfont icon-sanjiao2"></icon>
-          <icon data-type="down" class="iconfont icon-sanjiao1"></icon>
-          <icon data-type="del" class="iconfont icon-31shanchu"></icon>
+          <i data-type="setting" class="iconfont icon-shuru"></i>
+          <i data-type="top" class="iconfont icon-sanjiao2"></i>
+          <i data-type="down" class="iconfont icon-sanjiao1"></i>
+          <i data-type="del" class="iconfont icon-31shanchu"></i>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
         <div class="item">
-          <icon class="iconfont icon-tuihuobaozhang"></icon>
+          <i class="iconfont icon-home2"></i>
           <div>导航</div>
         </div>
       </div>
       <div draggable="true" data-type="nav4" id="nav4_dom" class="copyDropDom">
         <div class="delDomClick">
-          <icon data-type="setting" class="iconfont icon-shuru"></icon>
-          <icon data-type="top" class="iconfont icon-sanjiao2"></icon>
-          <icon data-type="down" class="iconfont icon-sanjiao1"></icon>
-          <icon data-type="del" class="iconfont icon-31shanchu"></icon>
+          <i data-type="setting" class="iconfont icon-shuru"></i>
+          <i data-type="top" class="iconfont icon-sanjiao2"></i>
+          <i data-type="down" class="iconfont icon-sanjiao1"></i>
+          <i data-type="del" class="iconfont icon-31shanchu"></i>
         </div>
         <div class="item">导航</div>
         <div class="item">导航</div>
@@ -407,10 +408,10 @@
       </div>
       <div draggable="true" data-type="commodityList1" id="commodityList1_dom" class="copyDropDom">
         <div class="delDomClick">
-          <icon data-type="setting" class="iconfont icon-shuru"></icon>
-          <icon data-type="top" class="iconfont icon-sanjiao2"></icon>
-          <icon data-type="down" class="iconfont icon-sanjiao1"></icon>
-          <icon data-type="del" class="iconfont icon-31shanchu"></icon>
+          <i data-type="setting" class="iconfont icon-shuru"></i>
+          <i data-type="top" class="iconfont icon-sanjiao2"></i>
+          <i data-type="down" class="iconfont icon-sanjiao1"></i>
+          <i data-type="del" class="iconfont icon-31shanchu"></i>
         </div>
         <div class="listName">列表标题列表标题</div>
         <div class="item">
@@ -423,17 +424,17 @@
                 <div class='priceUnit'>元</div>
                 <div class='salesVolume'>销售量:1000件</div>
               </div>
-              <icon class="iconfont icon-tuihuobaozhang"></icon>
+              <i class="iconfont icon-31gouwuchexuanzhong"></i>
             </div>
           </div>
         </div>
       </div>
       <div draggable="true" data-type="commodityList2" id="commodityList2_dom" class="copyDropDom">
         <div class="delDomClick">
-          <icon data-type="setting" class="iconfont icon-shuru"></icon>
-          <icon data-type="top" class="iconfont icon-sanjiao2"></icon>
-          <icon data-type="down" class="iconfont icon-sanjiao1"></icon>
-          <icon data-type="del" class="iconfont icon-31shanchu"></icon>
+          <i data-type="setting" class="iconfont icon-shuru"></i>
+          <i data-type="top" class="iconfont icon-sanjiao2"></i>
+          <i data-type="down" class="iconfont icon-sanjiao1"></i>
+          <i data-type="del" class="iconfont icon-31shanchu"></i>
         </div>
         <div class="listName">列表标题列表标题</div>
         <div class="item">
@@ -448,17 +449,17 @@
                 </div>
                 <div class='salesVolume'>销售量:1000件</div>
               </div>
-              <icon class="iconfont icon-tuihuobaozhang"></icon>
+              <i class="iconfont icon-31gouwuchexuanzhong"></i>
             </div>
           </div>
         </div>
       </div>
       <div draggable="true" data-type="commodityList3" id="commodityList3_dom" class="copyDropDom">
         <div class="delDomClick">
-          <icon data-type="setting" class="iconfont icon-shuru"></icon>
-          <icon data-type="top" class="iconfont icon-sanjiao2"></icon>
-          <icon data-type="down" class="iconfont icon-sanjiao1"></icon>
-          <icon data-type="del" class="iconfont icon-31shanchu"></icon>
+          <i data-type="setting" class="iconfont icon-shuru"></i>
+          <i data-type="top" class="iconfont icon-sanjiao2"></i>
+          <i data-type="down" class="iconfont icon-sanjiao1"></i>
+          <i data-type="del" class="iconfont icon-31shanchu"></i>
         </div>
         <div class="listName">列表标题列表标题</div>
         <div class="item">
@@ -473,115 +474,70 @@
                 </div>
                 <div class='salesVolume'>销售量:1000件</div>
               </div>
-              <icon class="iconfont icon-tuihuobaozhang"></icon>
+              <i class="iconfont icon-31gouwuchexuanzhong"></i>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- 弹框区域 -->
+    <div>
+        <div class="bulletBoxBG">
+          <i class="bulletBoxClose iconfont icon-guanbi closeBox"></i>
+          <div class="colorSel">
+            <h5 class="modal-title">颜色选择</h5>
+            <div class="modal-body conList">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">保存</button>
+              <button type="button" class="btn btn-secondary closeBox" data-dismiss="modal">退出</button>
+            </div>
+          </div>
+    
+          <div class="iconSel">
+            <h5 class="modal-title">图标选择</h5>
+            <div class="modal-body conList">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">保存</button>
+              <button type="button" class="btn btn-secondary closeBox" data-dismiss="modal">退出</button>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </body>
-
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script>
-  $(function () {
-    // $(document).on("click", ".copyDropDom",function(e){
-    //   let typeName = $(this).attr("data-type");
-    //   // alert(typeName);
-    //   // 根据点击的组件，在右侧框中显示组件的设置项目
-    //   switch(typeName) {
-    //     case 'search1': 
-    //       $('#search1_Setting').show()
-    //       break;
-    //     case 'search1': 
-    //       $('#search1_Setting').show()
-    //       break;
-    //   }
-    // });
-    //开始拖动
-    $(".dragstartDom li, #pageModel .copyDropDom").on("dragstart", function (e) {
-      console.log("SET -> addBuffer", e.target.id);
-      e.originalEvent.dataTransfer.setData("addBuffer", e.target.id);
-      e.originalEvent.dataTransfer.effectAllowed = 'all';
-      e.originalEvent.dataTransfer.dropEffect = 'all';
-      e.originalEvent.dataTransfer.setDragImage(this, 0, 0);
-    });
-    $("#pageModel").on("dragover", function (e) {
-      e.originalEvent.preventDefault();
-    })
-    $("#removeBox").on("dragover", function (e) {
-      e.originalEvent.preventDefault();
-    })
-    //放下事件  
-    $("#pageModel").on("drop", function (e) {
-      e.originalEvent.preventDefault();
-      var id = e.originalEvent.dataTransfer.getData("addBuffer");
-      if (id === null || id === "") {
-        console.log("id is NULL！");
-        return;
-      }
-      var itemName = id + parseInt(Math.random() * (1000000 - 1 + 1) + 1);
-      // 克隆真实对象
-      var cloneObject = document.getElementById(id + "_dom").cloneNode(true);
-      // 为克隆对象设置唯一Id
-      cloneObject.setAttribute("id", itemName);
-      // 事件追加绑定
-      cloneObject.addEventListener("dragstart", this.copyDrop2);
-      // 把新的节点添加到新的区域中
-      // e.target.appendChild(cloneObject);
-      $("#pageModel").append(cloneObject);
-      // 获取手机模型中的子元素
-      findChildren();
-    })
-    $(document).on("click", ".delDomClick .iconfont", function (e) {
-      var clickType = $(this).attr("data-type")
-      let thisDom = $(this).parents('.copyDropDom')
-      switch (clickType) {
-        case 'setting':
-          // 修改当前组件数据
-          let typeName = $(this).parents('.copyDropDom').attr("data-type");
-          // 显示与当前点击组件对应的修改项
-          $('.setSettingComponent').hide()
-          $('.' + typeName + '_Setting').show()
-          return false
-          break;
-        case 'top':
-          // 向上移动
-          $(this).parents('.copyDropDom').prev('.copyDropDom').before(thisDom)
-          break;
-        case 'down':
-          // 向下移动
-          $(this).parents('.copyDropDom').next('.copyDropDom').insertBefore(thisDom)
-          break;
-        case 'del':
-          // 删除当前DOM
-          $(this).parents('.copyDropDom').remove()
-          break;
-        default:
-          console.log('无匹配项')
-          break;
-      }
-      // 获取手机模型中的子元素
-      findChildren();
-    });
-  })
-  const findChildren = function () {
-    var domList = $("#pageModel").children();
-    var i = 0;
-    var domListNode = [];
-    for (let i = 0; i < domList.length; i++) {
-      let typeData = $("#" + domList[i].id).attr("data-type");
-      let domNode = { type: typeData, data: {} };
-      domListNode.push(domNode);
-    }
-    console.log(domListNode)
-  }
 
+<!-- 页面逻辑 -->
+<script src="js/workshop.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      selcommodityPage: 'page'
+    },
+    // 初始化
+    created: function () {
+      // `this` 指向 vm 实例
+      console.clear()
+      console.log('初始化====>>>>a is: ' + this.selcommodityPage)
+    },
+    
+    methods: {
+      commodityPageSel(e) {
+        // console.log(e)
+        console.log(e.srcElement.dataset)
+        this.selcommodityPage = e.srcElement.dataset.type
+        console.log('初始化====>>>>a is: ' + this.selcommodityPage)
+      }
+    }
+  })
 </script>
 
 </html>
