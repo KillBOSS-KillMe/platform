@@ -3,18 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>小程序工厂</title>
   <script src="js/jquery.min.3.4.1.js"></script>
   <!-- import Vue before Element -->
-  <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
   <!-- element-ui---引入样式 -->
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
   <!-- element-ui---引入组件库 -->
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
   <!-- css初始化 -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/reset.css">
   <!-- icon导入 -->
   <link rel="stylesheet" href="css/icon.css">
@@ -156,10 +158,106 @@
       </div>
       <!-- 组件数据设置区域 -->
       <div class="adjustment">
-        <div id="search1_Setting">
+        <div class="placard1_Setting setSettingComponent">
           <!-- 公告内容设置 -->
           <div class="title">公告内容设置</div>
-          标题设置，内容设置，
+          <div class="form-group">
+            <label for="exampleInputEmail1">公告内容</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="公告内容">
+            <small id="emailHelp" class="form-text text-muted">说明信息说明信息说明信息</small>
+          </div>
+          <button type="submit" class="btn btn-primary">保存</button>
+        </div>
+        <!-- setSettingComponent -->
+        <div class="nav1_Setting nav2_Setting nav3_Setting setSettingComponent">
+          <!-- 导航1，导航2，导航3=====>>>>内容设置 -->
+          <div class="title">导航内容设置</div>
+          <div class="item">
+            <div class="form-group">
+              <label for="exampleInputEmail1">输入名称</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="公告内容">
+              <small id="emailHelp" class="form-text text-muted">说明信息说明信息说明信息</small>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">使用图片</label>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">选择图标</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">使用预制图标</label>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-success">图标选择</button>
+              <button type="button" class="btn btn-danger">图标颜色选择</button>
+              <icon class="iconfont icon-fenxiang2"></icon>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button type="button" class="btn btn-link">新增导航</button>
+          </div>
+          <button type="submit" class="btn btn-primary">保存</button>
+        </div>
+        <div class="nav4_Setting setSettingComponent">
+          <!-- 导航4=====>>>>内容设置 -->
+          <div class="title">导航内容设置</div>
+          <div class="item">
+            <div class="form-group">
+              <label for="exampleInputEmail1">输入名称</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="公告内容">
+              <small id="emailHelp" class="form-text text-muted">说明信息说明信息说明信息</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button type="button" class="btn btn-link">新增导航</button>
+          </div>
+          <button type="submit" class="btn btn-primary">保存</button>
+        </div>
+        <div class="commodityList1_Setting commodityList2_Setting commodityList3_Setting setSettingComponent">
+          <!-- 商品信息添加，修改=====>>>>内容设置 -->
+          <div class="title">商品信息添加，修改</div>
+          <div class="item">
+            <div class="form-group">
+              <label for="exampleInputEmail1">输入商品名称</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="公告内容">
+              <small id="emailHelp" class="form-text text-muted">说明信息说明信息说明信息</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">输入商品描述</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="公告内容">
+              <small id="emailHelp" class="form-text text-muted">说明信息说明信息说明信息</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">输入商品价格</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="公告内容">
+              <small id="emailHelp" class="form-text text-muted">说明信息说明信息说明信息</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">上传商品轮播图片</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">上传商品详情图片</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button type="button" class="btn btn-link">导入已有商品</button>
+            <button type="button" class="btn btn-link">新增商品</button>
+          </div>
+          <button type="submit" class="btn btn-primary">保存</button>
         </div>
       </div>
     </div>
@@ -383,6 +481,13 @@
     </div>
   </div>
 </body>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
   $(function () {
     // $(document).on("click", ".copyDropDom",function(e){
@@ -441,7 +546,8 @@
           // 修改当前组件数据
           let typeName = $(this).parents('.copyDropDom').attr("data-type");
           // 显示与当前点击组件对应的修改项
-          $('#' + typeName + '_Setting').show()
+          $('.setSettingComponent').hide()
+          $('.' + typeName + '_Setting').show()
           return false
           break;
         case 'top':
