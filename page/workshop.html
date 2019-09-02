@@ -475,6 +475,7 @@
   var app = new Vue({
     el: '#app',
     data: {
+      // 页面列表
       pageList: [
         { 'icon': 'fenxiang2', 'name': '首页', 'id': 'index' },
         { 'icon': 'fenxiang2', 'name': '个人中心', 'id': 'user' },
@@ -482,11 +483,13 @@
         { 'icon': 'fenxiang2', 'name': '商品详情', 'id': 'commodityDetails' },
         { 'icon': 'fenxiang2', 'name': '个人中心', 'id': '1' },
       ],
+      // 公告组件
       basisComponent: [
         { 'icon': 'fenxiang2', 'name': '搜索1', 'id': 'search1' },
         { 'icon': 'fenxiang2', 'name': '搜索2', 'id': 'search2' },
         { 'icon': 'laba', 'name': '公告', 'id': 'placard1' }
       ],
+      // 首页组件
       indexComponent: [
         { 'icon': 'home', 'name': '导航1', 'id': 'nav1' },
         { 'icon': 'home', 'name': '导航2', 'id': 'nav2' },
@@ -496,6 +499,7 @@
         { 'icon': '31quanbushangpin', 'name': '商品2', 'id': 'commodityList2' },
         { 'icon': '31quanbushangpin', 'name': '商品3', 'id': 'commodityList3' }
       ],
+      // 商品详情页组件
       commodityDetailsComponent: [
         { 'icon': 'home', 'name': '轮播图', 'id': 'banner1' },
         { 'icon': 'home', 'name': '商品介绍', 'id': 'commodityInfo1' },
@@ -534,6 +538,7 @@
             break;
         }
         this.selcommodityPage = 'commodity'
+        // 公告组件与私有组件合并显示
         this.pageComponent = this.basisComponent.concat(component);
         console.log(this.pageComponent)
       },
